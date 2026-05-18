@@ -132,18 +132,9 @@ function App() {
         </div>
 
         {/* Tab Bar */}
-        <div className="flex items-start justify-center pb-[25px] pt-[16px] px-[25px] relative shrink-0 w-full">
-          <div className="flex flex-1 items-start justify-center min-w-px px-[2px] relative">
-            <div className="absolute inset-[-4px]">
-              <div className="absolute inset-0 rounded-[296px] shadow-[0px_8px_40px_0px_rgba(0,0,0,0.12)]">
-                <div className="absolute bg-[rgba(255,255,255,0.65)] inset-0 rounded-[296px]" />
-                <div className="absolute bg-[#ddd] inset-0 mix-blend-color-burn rounded-[296px]" />
-                <div className="absolute bg-[#f7f7f7] inset-0 mix-blend-darken rounded-[296px]" />
-              </div>
-              <div className="absolute bg-[rgba(0,0,0,0)] inset-0 rounded-[296px]" />
-            </div>
-            <div className="flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] pb-[7px] pt-[6px] px-[8px] relative">
-              <div className="absolute bg-[#f5f5f5] inset-[0_-1.67px_0_-2px] rounded-[100px]" />
+        <div className="flex items-start justify-center pb-[25px] pt-[16px] px-[21px] relative shrink-0 w-full">
+          <div className="bg-[#F6F6F6] drop-shadow-[0px_8px_20px_rgba(0,0,0,0.12)] flex flex-1 items-start justify-center min-w-px px-[6px] py-[4px] relative rounded-[100px]">
+            <div className="bg-[#e8e8e8] flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] overflow-clip pb-[7px] pt-[6px] px-[8px] relative rounded-[100px]">
               <img src={tabHome} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
               <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#00a4ff] text-[10px] text-center tracking-[-0.1px]">
                 Главная
