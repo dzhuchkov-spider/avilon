@@ -12,7 +12,7 @@ import Graphic from './assets/img/Graphic.svg';
 function App() {
   return (
     <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4">
-      <div className="w-full max-w-[375px] min-h-[812px] bg-[#EEF1F1] rounded-[32px] outline outline-[12px] outline-black overflow-hidden flex flex-col font-['Manrope']">
+      <div className="w-full max-w-[375px] h-[812px] bg-[#EEF1F1] rounded-[32px] outline outline-[12px] outline-black flex flex-col overflow-hidden font-['Manrope']">
         {/* Status Bar */}
         <div className="flex gap-[154px] items-center justify-center pb-[19px] pt-[21px] px-[16px] relative shrink-0 w-full">
           <div className="flex flex-[1_0_0] h-[22px] items-center justify-center min-w-px pt-[1.5px] relative">
@@ -43,7 +43,7 @@ function App() {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 !px-4 !py-4 flex flex-col !gap-6 overflow-y-auto" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
+        <div className="h-[812px] overflow-y-auto" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
           {/* Title Section */}
           <div>
             <div className="flex justify-between items-start mb-4">
@@ -219,7 +219,7 @@ function App() {
               {/* Finance Cards */}
               <div className="flex flex-wrap gap-[8px] w-full">
                 {/* Card 1: Выручка */}
-                <div className="bg-white flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
                   <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                     Выручка
                   </p>
@@ -244,7 +244,7 @@ function App() {
                 </div>
 
                 {/* Card 2: EBITDA */}
-                <div className="bg-white flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
                   <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                     EBITDA
                   </p>
@@ -269,7 +269,7 @@ function App() {
                 </div>
 
                 {/* Card 3: Чистая прибыль */}
-                <div className="bg-white flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
                   <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                     Чистая прибыль
                   </p>
@@ -294,7 +294,7 @@ function App() {
                 </div>
 
                 {/* Card 4: Cash Flow */}
-                <div className="bg-white flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
+                <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
                   <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                     Cash Flow
                   </p>
