@@ -153,10 +153,51 @@ function App() {
             </div>
 
             {/* Button */}
-            <div style={{ marginTop: '16px' }}>
+            <div style={{ marginTop: '40px' }}>
               <div className="bg-[#3a3b4f] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[12px] size-full">
                 <p className="[word-break:break-word] font-['Manrope:SemiBold',sans-serif] font-semibold leading-[24px] relative shrink-0 text-[16px] text-white whitespace-nowrap" style={{ color: '#FFFFFF' }}>
                   Смотреть все показатели KPI
+                </p>
+              </div>
+            </div>
+
+            {/* Chips Line */}
+            <div className="flex gap-[8px] overflow-x-auto mt-[40px]" style={{ marginTop: '40px', gap: '8px' }}>
+              {/* Active Chip */}
+              <div className="bg-[#d9e0e8] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-medium leading-[20px] text-[#3a3b4f] text-[14px] whitespace-nowrap">
+                  Финансы
+                </p>
+              </div>
+              {/* Inactive Chips */}
+              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+                  Коммерция
+                </p>
+              </div>
+              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+                  Маркетинг
+                </p>
+              </div>
+              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+                  Сервис
+                </p>
+              </div>
+              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+                  Клиентский опыт
+                </p>
+              </div>
+              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+                  HR и ресурсы
+                </p>
+              </div>
+              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
+                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+                  Стратегия
                 </p>
               </div>
             </div>
