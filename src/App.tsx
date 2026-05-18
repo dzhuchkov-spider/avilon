@@ -17,7 +17,7 @@ function App() {
             </p>
           </div>
           <div className="flex flex-[1_0_0] gap-[7px] h-[22px] items-center justify-center min-w-px pr-px pt-px relative">
-            <img src={Levels} alt="" className="h-[13px] w-[64px]" />
+            <img src={Levels} alt="" className="h-[22px] w-[94px]" />
           </div>
         </div>
 
@@ -32,25 +32,8 @@ function App() {
             <div className="h-full relative shrink-0 w-[8px]" />
           </div>
           <div className="flex flex-[1_0_0] gap-[10px] items-center justify-end min-w-px relative">
-            <div className="flex gap-[20px] h-[44px] items-center px-[4px] relative rounded-[296px] shrink-0">
-              <div aria-hidden="true" className="absolute bg-white inset-0 mix-blend-multiply pointer-events-none rounded-[296px]" />
-              <div className="-translate-y-1/2 absolute h-[44px] left-0 right-0 top-1/2">
-                <div className="absolute inset-0 rounded-[296px] shadow-[0px_8px_40px_0px_rgba(0,0,0,0.12)]">
-                  <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[296px]">
-                    <div className="absolute bg-[rgba(255,255,255,0.65)] inset-0 rounded-[296px]" />
-                    <div className="absolute bg-[#ddd] inset-0 mix-blend-color-burn rounded-[296px]" />
-                    <div className="absolute bg-[#f7f7f7] inset-0 mix-blend-darken rounded-[296px]" />
-                  </div>
-                </div>
-                <div className="absolute bg-[rgba(0,0,0,0)] inset-0 rounded-[296px]" />
-              </div>
-              <div className="flex flex-col items-start relative rounded-[100px] shrink-0 size-[36px]">
-                <div className="overflow-clip relative shrink-0 size-[36px]">
-                  <div className="absolute inset-[16.67%_19.69%_16.67%_19.44%]">
-                    <img src={Notification} alt="" className="size-full" />
-                  </div>
-                </div>
-              </div>
+            <div className="w-[44px] h-[44px] rounded-full bg-[#F6F6F6] shadow-[0px_8px_40px_0px_rgba(0,0,0,0.12)] flex items-center justify-center relative shrink-0">
+              <img src={Notification} alt="" className="w-[36px] h-[36px]" />
             </div>
           </div>
         </div>
