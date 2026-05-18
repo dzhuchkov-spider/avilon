@@ -39,7 +39,7 @@ function App() {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 px-4 py-4 flex flex-col gap-6 overflow-y-auto overflow-x-hidden">
+        <div className="flex-1 !px-4 !py-4 flex flex-col !gap-6 overflow-y-auto" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
           {/* Title Section */}
           <div>
             <div className="flex justify-between items-start mb-4">
@@ -48,7 +48,7 @@ function App() {
             </div>
 
             {/* KPI Cards */}
-            <div className="flex gap-2 overflow-x-auto pb-2">
+            <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px' }}>
               {/* KPI Card 1 */}
               <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] flex-shrink-0">
                 <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
