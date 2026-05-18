@@ -39,7 +39,7 @@ function App() {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 px-4 py-4 flex flex-col gap-6 overflow-y-auto">
+        <div className="flex-1 px-4 py-4 flex flex-col gap-6 overflow-y-auto overflow-x-hidden">
           {/* Title Section */}
           <div>
             <div className="flex justify-between items-start mb-4">
@@ -74,7 +74,7 @@ function App() {
                   </div>
                   <div className="h-0 relative shrink-0 w-full">
                     <div className="absolute inset-[-1px_0_0_0]">
-                      <div className="w-full h-[1px] bg-gray-200"></div>
+                      <div className="w-full h-[1px] bg-[#F5F5F5]"></div>
                     </div>
                   </div>
                   <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[#818587] text-[12px] text-center whitespace-nowrap">
@@ -84,7 +84,7 @@ function App() {
               </div>
 
               {/* KPI Card 2 */}
-              <div className="bg-white rounded-[16px] p-4 min-w-[200px] flex-shrink-0">
+              <div className="bg-white rounded-[16px] p-4 w-[210px] flex-shrink-0">
                 <p className="text-[14px] font-normal text-black text-center mb-4">KPI по выручке</p>
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <span className="text-[24px] font-semibold text-black">20%</span>
@@ -100,7 +100,7 @@ function App() {
               </div>
 
               {/* KPI Card 3 */}
-              <div className="bg-white rounded-[16px] p-4 min-w-[200px] flex-shrink-0">
+              <div className="bg-white rounded-[16px] p-4 w-[210px] flex-shrink-0">
                 <p className="text-[14px] font-normal text-black text-center mb-4">KPI по прибыли</p>
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <span className="text-[24px] font-semibold text-black">7%</span>
