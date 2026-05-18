@@ -1,3 +1,7 @@
+import tabHome from './assets/icons/tab-home.svg';
+import tabRisk from './assets/icons/tab-risk.svg';
+import tabProfile from './assets/icons/tab-profile.svg';
+
 function App() {
   return (
     <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4">
@@ -128,24 +132,35 @@ function App() {
         </div>
 
         {/* Tab Bar */}
-        <div className="bg-white/80 backdrop-blur-lg shadow-[0px_8px_40px_rgba(0,0,0,0.12)] rounded-t-[20px] px-4 py-4">
-          <div className="flex justify-around">
-            <div className="flex flex-col items-center gap-1 px-4 py-2 bg-[#F5F5F5] rounded-[100px]">
-              <span className="material-icons text-[#00A4FF] text-[24px]">home</span>
-              <span className="text-[10px] font-semibold text-[#00A4FF]">Главная</span>
+        <div className="flex items-start justify-center pb-[25px] pt-[16px] px-[25px] relative shrink-0 w-full">
+          <div className="flex flex-1 items-start justify-center min-w-px px-[2px] relative">
+            <div className="absolute inset-[-4px]">
+              <div className="absolute inset-0 rounded-[296px] shadow-[0px_8px_40px_0px_rgba(0,0,0,0.12)]">
+                <div className="absolute bg-[rgba(255,255,255,0.65)] inset-0 rounded-[296px]" />
+                <div className="absolute bg-[#ddd] inset-0 mix-blend-color-burn rounded-[296px]" />
+                <div className="absolute bg-[#f7f7f7] inset-0 mix-blend-darken rounded-[296px]" />
+              </div>
+              <div className="absolute bg-[rgba(0,0,0,0)] inset-0 rounded-[296px]" />
             </div>
-            <div className="flex flex-col items-center gap-1 px-4 py-2">
-              <span className="material-icons text-[#3A3B4F] text-[24px]">warning</span>
-              <span className="text-[10px] font-semibold text-[#3A3B4F]">Риски</span>
+            <div className="flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] pb-[7px] pt-[6px] px-[8px] relative">
+              <div className="absolute bg-[#f5f5f5] inset-[0_-1.67px_0_-2px] rounded-[100px]" />
+              <img src={tabHome} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
+              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#00a4ff] text-[10px] text-center tracking-[-0.1px]">
+                Главная
+              </p>
             </div>
-            <div className="flex flex-col items-center gap-1 px-4 py-2">
-              <span className="material-icons text-[#3A3B4F] text-[24px]">person</span>
-              <span className="text-[10px] font-semibold text-[#3A3B4F]">Профиль</span>
+            <div className="flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px mr-[-8px] pb-[7px] pt-[6px] px-[8px] relative">
+              <img src={tabRisk} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
+              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#3a3b4f] text-[10px] text-center">
+                Риски
+              </p>
             </div>
-          </div>
-          {/* Home Indicator */}
-          <div className="flex justify-center mt-2">
-            <div className="w-[144px] h-[5px] bg-black rounded-[100px]"></div>
+            <div className="flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px pb-[7px] pt-[6px] px-[8px] relative">
+              <img src={tabProfile} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
+              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#3a3b4f] text-[10px] text-center">
+                Профиль
+              </p>
+            </div>
           </div>
         </div>
       </div>
