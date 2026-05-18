@@ -4,6 +4,10 @@ import tabProfile from './assets/icons/tab-profile.svg';
 import Levels from './assets/icons/Levels.svg';
 import Notification from './assets/icons/Notification.svg';
 import Logo from './assets/img/Logo.png';
+import arrowRight from './assets/icons/arrow-right.svg';
+import arrowUp from './assets/icons/arrow-up.svg';
+import arrowDown from './assets/icons/arrow-down.svg';
+import Graphic from './assets/img/Graphic.svg';
 
 function App() {
   return (
@@ -199,6 +203,126 @@ function App() {
                 <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
                   Стратегия
                 </p>
+              </div>
+            </div>
+
+            {/* Finance Content Block */}
+            <div className="flex flex-col gap-[12px] items-start mt-[24px]">
+              {/* Title with arrow */}
+              <div className="flex gap-[35px] items-center w-[343px]">
+                <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                  Финансы
+                </p>
+                <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+              </div>
+
+              {/* Finance Cards */}
+              <div className="flex flex-wrap gap-[8px] w-full">
+                {/* Card 1: Выручка */}
+                <div className="bg-white flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                    Выручка
+                  </p>
+                  <div className="flex flex-col gap-[12px]">
+                    <div className="flex gap-[8px] items-center">
+                      <div className="flex gap-[4px] items-baseline">
+                        <p className="font-semibold leading-[32px] text-[24px] text-black">
+                          240
+                        </p>
+                        <p className="font-normal leading-[20px] text-[14px] text-black">
+                          млн ₽
+                        </p>
+                      </div>
+                      <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
+                        +4%
+                      </p>
+                    </div>
+                    <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
+                      <img src={Graphic} alt="" className="w-full h-full" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 2: EBITDA */}
+                <div className="bg-white flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                    EBITDA
+                  </p>
+                  <div className="flex flex-col gap-[12px]">
+                    <div className="flex gap-[8px] items-center">
+                      <div className="flex gap-[4px] items-baseline">
+                        <p className="font-semibold leading-[32px] text-[24px] text-black">
+                          40
+                        </p>
+                        <p className="font-normal leading-[20px] text-[14px] text-black">
+                          млн ₽
+                        </p>
+                      </div>
+                      <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
+                        +1%
+                      </p>
+                    </div>
+                    <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
+                      <img src={Graphic} alt="" className="w-full h-full" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 3: Чистая прибыль */}
+                <div className="bg-white flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                    Чистая прибыль
+                  </p>
+                  <div className="flex flex-col gap-[12px]">
+                    <div className="flex gap-[8px] items-center">
+                      <div className="flex gap-[4px] items-baseline">
+                        <p className="font-semibold leading-[32px] text-[24px] text-black">
+                          56
+                        </p>
+                        <p className="font-normal leading-[20px] text-[14px] text-black">
+                          млн ₽
+                        </p>
+                      </div>
+                      <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
+                        +2%
+                      </p>
+                    </div>
+                    <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
+                      <img src={Graphic} alt="" className="w-full h-full" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card 4: Cash Flow */}
+                <div className="bg-white flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
+                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                    Cash Flow
+                  </p>
+                  <div className="flex flex-col gap-[12px]">
+                    <div className="flex items-center">
+                      <div className="flex gap-[4px] items-baseline">
+                        <p className="font-semibold leading-[32px] text-[24px] text-black">
+                          +1.2
+                        </p>
+                        <p className="font-normal leading-[20px] text-[14px] text-black">
+                          млн ₽
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex gap-[4px] items-center">
+                      <img src={arrowUp} alt="" className="w-[16px] h-[16px]" />
+                      <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
+                        Приток: 4.82 млн ₽
+                      </p>
+                    </div>
+                    <div className="flex gap-[4px] items-center">
+                      <img src={arrowDown} alt="" className="w-[16px] h-[16px]" />
+                      <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
+                        Отток: 3.58 млн ₽
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
