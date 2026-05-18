@@ -220,7 +220,7 @@ function App() {
               <div className="flex flex-wrap gap-[8px] w-full">
                 {/* Card 1: Выручка */}
                 <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                     Выручка
                   </p>
                   <div className="flex flex-col gap-[12px]">
@@ -245,7 +245,7 @@ function App() {
 
                 {/* Card 2: EBITDA */}
                 <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                     EBITDA
                   </p>
                   <div className="flex flex-col gap-[12px]">
@@ -270,7 +270,7 @@ function App() {
 
                 {/* Card 3: Чистая прибыль */}
                 <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                     Чистая прибыль
                   </p>
                   <div className="flex flex-col gap-[12px]">
@@ -295,7 +295,7 @@ function App() {
 
                 {/* Card 4: Cash Flow */}
                 <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                     Cash Flow
                   </p>
                   <div className="flex flex-col gap-[12px]">
