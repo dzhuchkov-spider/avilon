@@ -1,29 +1,57 @@
 import tabHome from './assets/icons/tab-home.svg';
 import tabRisk from './assets/icons/tab-risk.svg';
 import tabProfile from './assets/icons/tab-profile.svg';
+import Levels from './assets/icons/Levels.svg';
+import Notification from './assets/icons/Notification.svg';
+import Logo from './assets/img/Logo.png';
 
 function App() {
   return (
     <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4">
       <div className="w-full max-w-[375px] min-h-[812px] bg-[#EEF1F1] rounded-[32px] outline outline-[12px] outline-black overflow-hidden flex flex-col font-['Manrope']">
         {/* Status Bar */}
-        <div className="flex justify-between items-center px-4 pt-3 pb-2">
-          <span className="text-[17px] font-semibold leading-[22px] text-black">9:41</span>
-          <div className="flex items-center gap-1">
-            <span className="material-icons text-[18px]">signal_cellular_alt</span>
-            <span className="material-icons text-[18px]">wifi</span>
-            <span className="material-icons text-[18px]">battery_full</span>
+        <div className="flex gap-[154px] items-center justify-center pb-[19px] pt-[21px] px-[16px] relative shrink-0 w-full">
+          <div className="flex flex-[1_0_0] h-[22px] items-center justify-center min-w-px pt-[1.5px] relative">
+            <p className="[word-break:break-word] font-['SF_Pro:Semibold',sans-serif] font-[590] leading-[22px] relative shrink-0 text-[17px] text-black text-center whitespace-nowrap" style={{ fontVariationSettings: "'wdth' 100" }}>
+              9:41
+            </p>
+          </div>
+          <div className="flex flex-[1_0_0] gap-[7px] h-[22px] items-center justify-center min-w-px pr-px pt-px relative">
+            <img src={Levels} alt="" className="h-[13px] w-[64px]" />
           </div>
         </div>
 
         {/* Header */}
-        <div className="flex justify-between items-center px-4 py-2">
-          <div className="flex items-center gap-2">
-            <span className="material-icons text-[#3A3B4F] text-[28px]">menu</span>
-            <span className="text-[18px] font-semibold text-[#3A3B4F]">Авилон</span>
+        <div className="flex gap-[10px] items-center pb-[10px] px-[16px] relative shrink-0 w-full">
+          <div className="flex flex-[1_0_0] gap-[10px] items-center min-w-px relative">
+            <div className="h-[44px] relative shrink-0 w-[160px]">
+              <img src={Logo} alt="" className="h-full w-full object-contain" />
+            </div>
           </div>
-          <div className="w-[36px] h-[36px] rounded-full bg-white shadow-lg flex items-center justify-center">
-            <span className="material-icons text-[20px] text-[#3A3B4F]">notifications</span>
+          <div className="flex flex-row items-center self-stretch">
+            <div className="h-full relative shrink-0 w-[8px]" />
+          </div>
+          <div className="flex flex-[1_0_0] gap-[10px] items-center justify-end min-w-px relative">
+            <div className="flex gap-[20px] h-[44px] items-center px-[4px] relative rounded-[296px] shrink-0">
+              <div aria-hidden="true" className="absolute bg-white inset-0 mix-blend-multiply pointer-events-none rounded-[296px]" />
+              <div className="-translate-y-1/2 absolute h-[44px] left-0 right-0 top-1/2">
+                <div className="absolute inset-0 rounded-[296px] shadow-[0px_8px_40px_0px_rgba(0,0,0,0.12)]">
+                  <div aria-hidden="true" className="absolute inset-0 pointer-events-none rounded-[296px]">
+                    <div className="absolute bg-[rgba(255,255,255,0.65)] inset-0 rounded-[296px]" />
+                    <div className="absolute bg-[#ddd] inset-0 mix-blend-color-burn rounded-[296px]" />
+                    <div className="absolute bg-[#f7f7f7] inset-0 mix-blend-darken rounded-[296px]" />
+                  </div>
+                </div>
+                <div className="absolute bg-[rgba(0,0,0,0)] inset-0 rounded-[296px]" />
+              </div>
+              <div className="flex flex-col items-start relative rounded-[100px] shrink-0 size-[36px]">
+                <div className="overflow-clip relative shrink-0 size-[36px]">
+                  <div className="absolute inset-[16.67%_19.69%_16.67%_19.44%]">
+                    <img src={Notification} alt="" className="size-full" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
