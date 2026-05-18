@@ -188,8 +188,11 @@ function App() {
                   Коммерция
                 </p>
               </div>
-              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
-                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+              <div
+                className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Маркетинг' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
+                onClick={() => setActiveChip('Маркетинг')}
+              >
+                <p className={`leading-[20px] text-[14px] whitespace-nowrap ${activeChip === 'Маркетинг' ? 'font-medium text-[#3a3b4f]' : 'font-normal text-black'}`}>
                   Маркетинг
                 </p>
               </div>
@@ -330,6 +333,66 @@ function App() {
                           <img src={arrowDown} alt="" className="w-[16px] h-[16px]" />
                           <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
                             Отток: 3.58 млн ₽
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : activeChip === 'Маркетинг' ? (
+                <>
+                  {/* Title with arrow */}
+                  <div className="flex gap-[35px] items-center w-[343px]">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      Маркетинг
+                    </p>
+                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                  </div>
+
+                  {/* Marketing Cards */}
+                  <div className="flex gap-[8px] w-full">
+                    {/* Card 1: ROI маркетинга */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] flex-1">
+                      <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                        ROI маркетинга
+                      </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex items-center">
+                          <div className="flex gap-[4px] items-baseline text-[#10c44b]">
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              185
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              %
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex gap-[4px] items-center">
+                          <img src={arrowUp} alt="" className="w-[16px] h-[16px]" />
+                          <p className="font-normal leading-[16px] text-[12px] text-[#818587] whitespace-nowrap">
+                            Маржа: 42%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Card 2: Конверсия сайта */}
+                    <div className="bg-[#FFFFFF] flex flex-col h-[128px] justify-between p-[16px] rounded-[16px] flex-1">
+                      <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                        Конверсия сайта
+                      </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex gap-[8px] items-baseline">
+                          <div className="flex gap-[4px] items-baseline text-black">
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              3.8
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              %
+                            </p>
+                          </div>
+                          <p className="font-medium leading-[24px] text-[#00c03f] text-[16px]">
+                            +0.6%
                           </p>
                         </div>
                       </div>
