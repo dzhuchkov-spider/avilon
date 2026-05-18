@@ -157,7 +157,7 @@ function App() {
             </div>
 
             {/* Button */}
-            <div style={{ marginTop: '40px' }}>
+            <div style={{ marginTop: '16px', marginBottom: '40px' }}>
               <div className="bg-[#3a3b4f] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[12px] size-full">
                 <p className="[word-break:break-word] font-['Manrope:SemiBold',sans-serif] font-semibold leading-[24px] relative shrink-0 text-[16px] text-white whitespace-nowrap" style={{ color: '#FFFFFF' }}>
                   Смотреть все показатели KPI
@@ -166,7 +166,7 @@ function App() {
             </div>
 
             {/* Chips Line */}
-            <div className="flex gap-[8px] overflow-x-auto mt-[40px]" style={{ marginTop: '40px', gap: '8px' }}>
+            <div className="flex gap-[8px] overflow-x-auto" style={{ gap: '8px' }}>
               {/* Active Chip */}
               <div className="bg-[#d9e0e8] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
                 <p className="font-medium leading-[20px] text-[#3a3b4f] text-[14px] whitespace-nowrap">
