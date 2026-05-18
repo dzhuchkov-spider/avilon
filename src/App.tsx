@@ -348,7 +348,7 @@ function App() {
                   </div>
 
                   {/* Circle Graph Card */}
-                  <div className="bg-white flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
+                  <div className="bg-[#FFFFFF] flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
                     <div className="h-[124px] overflow-hidden relative w-full">
                       {/* Circle Graph Visualization */}
                       <img src={CircleGraph} alt="" className="w-full h-full" />
@@ -402,7 +402,7 @@ function App() {
                   </div>
 
                   {/* Plan Fulfillment Card */}
-                  <div className="bg-white flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
+                  <div className="bg-[#FFFFFF] flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
                     <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                       Выполнение плана
                     </p>
