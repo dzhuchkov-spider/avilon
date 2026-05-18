@@ -151,6 +151,15 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* Button */}
+            <div style={{ marginTop: '16px' }}>
+              <div className="bg-[#3a3b4f] content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[12px] size-full">
+                <p className="[word-break:break-word] font-['Manrope:SemiBold',sans-serif] font-semibold leading-[24px] relative shrink-0 text-[16px] text-white whitespace-nowrap" style={{ color: '#FFFFFF' }}>
+                  Смотреть все показатели KPI
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Tasks Section */}
