@@ -43,7 +43,7 @@ function App() {
           {/* Title Section */}
           <div>
             <div className="flex justify-between items-start mb-4">
-              <h1 className="text-[20px] font-semibold leading-[28px] text-black">Сводка на сегодня</h1>
+              <h1 className="text-[20px] leading-[28px] text-black" style={{ fontWeight: 600 }}>Сводка на сегодня</h1>
               <span className="text-[16px] text-[#767676]">13 мая 2026</span>
             </div>
 
@@ -162,47 +162,6 @@ function App() {
             </div>
           </div>
 
-          {/* Tasks Section */}
-          <div>
-            <h2 className="text-[18px] font-semibold text-black mb-4">Задачи на сегодня</h2>
-            <div className="flex flex-col gap-3">
-              {/* Task Item 1 */}
-              <div className="bg-white rounded-[16px] p-4 flex items-center gap-3">
-                <div className="w-[40px] h-[40px] rounded-full bg-[#E8F4FD] flex items-center justify-center flex-shrink-0">
-                  <span className="material-icons text-[#00A4FF] text-[20px]">shopping_cart</span>
-                </div>
-                <div className="flex-1">
-                  <p className="text-[14px] font-medium text-black">Проверить заказы</p>
-                  <p className="text-[12px] text-[#818587]">5 новых заказов</p>
-                </div>
-                <span className="material-icons text-[#CCCCCC] text-[20px]">chevron_right</span>
-              </div>
-
-              {/* Task Item 2 */}
-              <div className="bg-white rounded-[16px] p-4 flex items-center gap-3">
-                <div className="w-[40px] h-[40px] rounded-full bg-[#FFF4E5] flex items-center justify-center flex-shrink-0">
-                  <span className="material-icons text-[#FF9500] text-[20px]">inventory_2</span>
-                </div>
-                <div className="flex-1">
-                  <p className="text-[14px] font-medium text-black">Обновить склад</p>
-                  <p className="text-[12px] text-[#818587]">3 позиции на исходе</p>
-                </div>
-                <span className="material-icons text-[#CCCCCC] text-[20px]">chevron_right</span>
-              </div>
-
-              {/* Task Item 3 */}
-              <div className="bg-white rounded-[16px] p-4 flex items-center gap-3">
-                <div className="w-[40px] h-[40px] rounded-full bg-[#E8F5E9] flex items-center justify-center flex-shrink-0">
-                  <span className="material-icons text-[#4CAF50] text-[20px]">people</span>
-                </div>
-                <div className="flex-1">
-                  <p className="text-[14px] font-medium text-black">Встреча с командой</p>
-                  <p className="text-[12px] text-[#818587]">15:00, конференц-зал</p>
-                </div>
-                <span className="material-icons text-[#CCCCCC] text-[20px]">chevron_right</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Tab Bar */}
