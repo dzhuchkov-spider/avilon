@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import tabHome from './assets/icons/tab-home.svg';
 import tabRisk from './assets/icons/tab-risk.svg';
 import tabProfile from './assets/icons/tab-profile.svg';
@@ -8,8 +9,10 @@ import arrowRight from './assets/icons/arrow-right.svg';
 import arrowUp from './assets/icons/arrow-up.svg';
 import arrowDown from './assets/icons/arrow-down.svg';
 import Graphic from './assets/img/Graphic.svg';
+import CircleGraph from './assets/img/Circle-Graph.svg';
 
 function App() {
+  const [activeChip, setActiveChip] = useState('Финансы');
   return (
     <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4">
       <div className="w-full max-w-[375px] h-[812px] bg-[#EEF1F1] rounded-[32px] outline outline-[12px] outline-black flex flex-col overflow-hidden font-['Manrope']">
@@ -168,14 +171,20 @@ function App() {
             {/* Chips Line */}
             <div className="flex gap-[8px] overflow-x-auto" style={{ gap: '8px' }}>
               {/* Active Chip */}
-              <div className="bg-[#d9e0e8] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
-                <p className="font-medium leading-[20px] text-[#3a3b4f] text-[14px] whitespace-nowrap">
+              <div
+                className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Финансы' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
+                onClick={() => setActiveChip('Финансы')}
+              >
+                <p className={`leading-[20px] text-[14px] whitespace-nowrap ${activeChip === 'Финансы' ? 'font-medium text-[#3a3b4f]' : 'font-normal text-black'}`}>
                   Финансы
                 </p>
               </div>
               {/* Inactive Chips */}
-              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
-                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+              <div
+                className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Коммерция' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
+                onClick={() => setActiveChip('Коммерция')}
+              >
+                <p className={`leading-[20px] text-[14px] whitespace-nowrap ${activeChip === 'Коммерция' ? 'font-medium text-[#3a3b4f]' : 'font-normal text-black'}`}>
                   Коммерция
                 </p>
               </div>
@@ -206,124 +215,221 @@ function App() {
               </div>
             </div>
 
-            {/* Finance Content Block */}
+            {/* Content Block */}
             <div className="flex flex-col gap-[12px] items-start mt-[24px]">
-              {/* Title with arrow */}
-              <div className="flex gap-[35px] items-center w-[343px]">
-                <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
-                  Финансы
-                </p>
-                <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
-              </div>
-
-              {/* Finance Cards */}
-              <div className="flex flex-wrap gap-[8px] w-full">
-                {/* Card 1: Выручка */}
-                <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
-                    Выручка
-                  </p>
-                  <div className="flex flex-col gap-[12px]">
-                    <div className="flex gap-[8px] items-center">
-                      <div className="flex gap-[4px] items-baseline">
-                        <p className="font-semibold leading-[32px] text-[24px] text-black">
-                          240
-                        </p>
-                        <p className="font-normal leading-[20px] text-[14px] text-black">
-                          млн ₽
-                        </p>
-                      </div>
-                      <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
-                        +4%
-                      </p>
-                    </div>
-                    <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                      <img src={Graphic} alt="" className="w-full h-full" />
-                    </div>
+              {activeChip === 'Финансы' ? (
+                <>
+                  {/* Title with arrow */}
+                  <div className="flex gap-[35px] items-center w-[343px]">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      Финансы
+                    </p>
+                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
                   </div>
-                </div>
 
-                {/* Card 2: EBITDA */}
-                <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
-                    EBITDA
-                  </p>
-                  <div className="flex flex-col gap-[12px]">
-                    <div className="flex gap-[8px] items-center">
-                      <div className="flex gap-[4px] items-baseline">
-                        <p className="font-semibold leading-[32px] text-[24px] text-black">
-                          40
-                        </p>
-                        <p className="font-normal leading-[20px] text-[14px] text-black">
-                          млн ₽
-                        </p>
-                      </div>
-                      <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
-                        +1%
+                  {/* Finance Cards */}
+                  <div className="flex flex-wrap gap-[8px] w-full">
+                    {/* Card 1: Выручка */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                      <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                        Выручка
                       </p>
-                    </div>
-                    <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                      <img src={Graphic} alt="" className="w-full h-full" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card 3: Чистая прибыль */}
-                <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
-                    Чистая прибыль
-                  </p>
-                  <div className="flex flex-col gap-[12px]">
-                    <div className="flex gap-[8px] items-center">
-                      <div className="flex gap-[4px] items-baseline">
-                        <p className="font-semibold leading-[32px] text-[24px] text-black">
-                          56
-                        </p>
-                        <p className="font-normal leading-[20px] text-[14px] text-black">
-                          млн ₽
-                        </p>
-                      </div>
-                      <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
-                        +2%
-                      </p>
-                    </div>
-                    <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                      <img src={Graphic} alt="" className="w-full h-full" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Card 4: Cash Flow */}
-                <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
-                  <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
-                    Cash Flow
-                  </p>
-                  <div className="flex flex-col gap-[12px]">
-                    <div className="flex items-center">
-                      <div className="flex gap-[4px] items-baseline">
-                        <p className="font-semibold leading-[32px] text-[24px] text-black">
-                          +1.2
-                        </p>
-                        <p className="font-normal leading-[20px] text-[14px] text-black">
-                          млн ₽
-                        </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex gap-[8px] items-center">
+                          <div className="flex gap-[4px] items-baseline">
+                            <p className="font-semibold leading-[32px] text-[24px] text-black">
+                              240
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px] text-black">
+                              млн ₽
+                            </p>
+                          </div>
+                          <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
+                            +4%
+                          </p>
+                        </div>
+                        <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
+                          <img src={Graphic} alt="" className="w-full h-full" />
+                        </div>
                       </div>
                     </div>
-                    <div className="flex gap-[4px] items-center">
-                      <img src={arrowUp} alt="" className="w-[16px] h-[16px]" />
-                      <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
-                        Приток: 4.82 млн ₽
+
+                    {/* Card 2: EBITDA */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                      <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                        EBITDA
                       </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex gap-[8px] items-center">
+                          <div className="flex gap-[4px] items-baseline">
+                            <p className="font-semibold leading-[32px] text-[24px] text-black">
+                              40
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px] text-black">
+                              млн ₽
+                            </p>
+                          </div>
+                          <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
+                            +1%
+                          </p>
+                        </div>
+                        <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
+                          <img src={Graphic} alt="" className="w-full h-full" />
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex gap-[4px] items-center">
-                      <img src={arrowDown} alt="" className="w-[16px] h-[16px]" />
-                      <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
-                        Отток: 3.58 млн ₽
+
+                    {/* Card 3: Чистая прибыль */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                      <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                        Чистая прибыль
                       </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex gap-[8px] items-center">
+                          <div className="flex gap-[4px] items-baseline">
+                            <p className="font-semibold leading-[32px] text-[24px] text-black">
+                              56
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px] text-black">
+                              млн ₽
+                            </p>
+                          </div>
+                          <p className="font-medium leading-[24px] text-[16px] text-[#00c03f]">
+                            +2%
+                          </p>
+                        </div>
+                        <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
+                          <img src={Graphic} alt="" className="w-full h-full" />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Card 4: Cash Flow */}
+                    <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
+                      <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                        Cash Flow
+                      </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex items-center">
+                          <div className="flex gap-[4px] items-baseline">
+                            <p className="font-semibold leading-[32px] text-[24px] text-black">
+                              +1.2
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px] text-black">
+                              млн ₽
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex gap-[4px] items-center">
+                          <img src={arrowUp} alt="" className="w-[16px] h-[16px]" />
+                          <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
+                            Приток: 4.82 млн ₽
+                          </p>
+                        </div>
+                        <div className="flex gap-[4px] items-center">
+                          <img src={arrowDown} alt="" className="w-[16px] h-[16px]" />
+                          <p className="font-normal leading-[16px] text-[12px] text-[#767676] whitespace-nowrap">
+                            Отток: 3.58 млн ₽
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </>
+              ) : (
+                <>
+                  {/* Commercial Data from Figma */}
+                  {/* Title with arrow */}
+                  <div className="flex gap-[35px] items-center w-[343px]">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      Коммерческие данные
+                    </p>
+                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                  </div>
+
+                  {/* Circle Graph Card */}
+                  <div className="bg-white flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
+                    <div className="h-[124px] overflow-hidden relative w-full">
+                      {/* Circle Graph Visualization */}
+                      <img src={CircleGraph} alt="" className="w-full h-full" />
+                      {/* Center text */}
+                      <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
+                        <p className="font-normal leading-[20px] text-[14px]">
+                          Всего лидов
+                        </p>
+                        <p className="font-semibold leading-[32px] text-[24px]">
+                          128
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Legend */}
+                    <div className="flex flex-col gap-[8px] items-start w-full">
+                      <div className="flex gap-[8px] items-center w-full">
+                        <div className="bg-[#a675a1] h-[12px] rounded-[2px] w-[6px]" />
+                        <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                          <p className="font-normal leading-[16px] text-[12px]">
+                            Целевые лиды
+                          </p>
+                          <p className="font-semibold leading-[20px] text-[14px]">
+                            80
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex gap-[8px] items-center w-full">
+                        <div className="bg-[#ff934f] h-[12px] rounded-[2px] w-[6px]" />
+                        <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                          <p className="font-normal leading-[16px] text-[12px]">
+                            Контракты
+                          </p>
+                          <p className="font-semibold leading-[20px] text-[14px]">
+                            24
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex gap-[8px] items-center w-full">
+                        <div className="bg-[#00a4ff] h-[12px] rounded-[2px] w-[6px]" />
+                        <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                          <p className="font-normal leading-[16px] text-[12px]">
+                            Выдачи
+                          </p>
+                          <p className="font-semibold leading-[20px] text-[14px]">
+                            12
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Plan Fulfillment Card */}
+                  <div className="bg-white flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
+                    <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                      Выполнение плана
+                    </p>
+                    <div className="flex flex-col gap-[12px] items-start w-full">
+                      <div className="flex gap-[8px] items-center w-full whitespace-nowrap">
+                        <div className="flex flex-1 gap-[8px] items-center">
+                          <p className="font-semibold leading-[32px] text-[24px] text-black">
+                            24%
+                          </p>
+                          <p className="font-medium leading-[24px] text-[#00c03f] text-[16px]">
+                            +1%
+                          </p>
+                        </div>
+                        <p className="font-normal leading-[20px] text-[14px] text-black">
+                          План: 8 тыс
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-start w-full">
+                        <div className="flex isolate items-start w-full">
+                          <div className="bg-[#00a4ff] h-[20px] mr-[-40px] rounded-[20px] w-[75px] z-[2]" />
+                          <div className="bg-[#d8ebfb] flex-1 h-[20px] min-w-px rounded-[20px] z-[1]" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
 
