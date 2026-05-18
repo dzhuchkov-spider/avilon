@@ -50,19 +50,37 @@ function App() {
             {/* KPI Cards */}
             <div className="flex gap-2 overflow-x-auto pb-2">
               {/* KPI Card 1 */}
-              <div className="bg-white rounded-[16px] p-4 min-w-[200px] flex-shrink-0">
-                <p className="text-[14px] font-normal text-black text-center mb-4">KPI по продажам</p>
-                <div className="flex items-center justify-center gap-2 mb-3">
-                  <span className="text-[24px] font-semibold text-black">24%</span>
-                  <span className="text-[16px] font-medium text-[#00C03F]">+1%</span>
+              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] flex-shrink-0">
+                <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
+                  KPI по продажам
+                </p>
+                <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
+                  <div className="[word-break:break-word] content-stretch flex gap-[8px] items-center relative shrink-0 text-center whitespace-nowrap">
+                    <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[32px] relative shrink-0 text-[24px] text-black">
+                      24%
+                    </p>
+                    <p className="font-['Manrope:Medium',sans-serif] font-medium leading-[24px] relative shrink-0 text-[#00c03f] text-[16px]">
+                      +1%
+                    </p>
+                  </div>
+                  <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full">
+                    <div className="content-stretch flex isolate items-start relative shrink-0 w-full">
+                      <div className="bg-[#00a4ff] h-[12px] mr-[-32px] relative rounded-[12px] shrink-0 w-[32px] z-[2]" />
+                      <div className="bg-[#d8ebfb] flex-[1_0_0] h-[12px] min-w-px relative rounded-[12px] z-[1]" />
+                    </div>
+                    <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[#818587] text-[12px] text-center whitespace-nowrap">
+                      План: 8 тыс
+                    </p>
+                  </div>
+                  <div className="h-0 relative shrink-0 w-full">
+                    <div className="absolute inset-[-1px_0_0_0]">
+                      <div className="w-full h-[1px] bg-gray-200"></div>
+                    </div>
+                  </div>
+                  <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[16px] relative shrink-0 text-[#818587] text-[12px] text-center whitespace-nowrap">
+                    Прогноз: 8.2 тыс
+                  </p>
                 </div>
-                <div className="flex items-center gap-1 mb-2">
-                  <div className="w-[32px] h-[12px] bg-[#00A4FF] rounded-[12px]"></div>
-                  <div className="flex-1 h-[12px] bg-[#D8EBFB] rounded-[12px]"></div>
-                </div>
-                <p className="text-[12px] text-[#818587] text-center mb-2">План: 8 тыс</p>
-                <div className="border-t border-gray-200 my-2"></div>
-                <p className="text-[12px] text-[#818587] text-center">Прогноз: 8.2 тыс</p>
               </div>
 
               {/* KPI Card 2 */}
