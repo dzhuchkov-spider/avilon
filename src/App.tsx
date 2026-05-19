@@ -571,17 +571,17 @@ function App() {
                             <div className="bg-[#6cae75] h-full rounded-[2px] w-[4px]" />
                           </div>
                           <div className="flex flex-col gap-[8px] flex-1">
-                            <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
                               Удовлетворены
                             </p>
-                            <div className="flex gap-[12px] items-center justify-center">
+                            <div className="flex gap-[12px] items-center">
                               <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
                                 65%
                               </p>
                               <div className="flex flex-row items-center self-stretch">
                                 <div className="bg-[#eeeff1] h-full w-px" />
                               </div>
-                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
+                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] whitespace-nowrap">
                                 1223
                               </p>
                             </div>
@@ -594,15 +594,17 @@ function App() {
                             <div className="bg-[#ffa630] h-full rounded-[2px] w-[4px]" />
                           </div>
                           <div className="flex flex-col gap-[8px] flex-1">
-                            <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
                               Нейтральные
                             </p>
-                            <div className="flex gap-[12px] items-start">
+                            <div className="flex gap-[12px] items-center">
                               <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
                                 24%
                               </p>
-                              <div className="bg-[#eeeff1] self-stretch w-px" />
-                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
+                              <div className="flex flex-row items-center self-stretch">
+                                <div className="bg-[#eeeff1] h-full w-px" />
+                              </div>
+                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] whitespace-nowrap">
                                 317
                               </p>
                             </div>
@@ -615,17 +617,17 @@ function App() {
                             <div className="bg-[#fc4135] h-full rounded-[2px] w-[4px]" />
                           </div>
                           <div className="flex flex-col gap-[8px] flex-1">
-                            <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
                               Критики
                             </p>
-                            <div className="flex gap-[12px] items-center justify-center">
+                            <div className="flex gap-[12px] items-center">
                               <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
                                 11%
                               </p>
                               <div className="flex flex-row items-center self-stretch">
                                 <div className="bg-[#eeeff1] h-full w-px" />
                               </div>
-                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
+                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] whitespace-nowrap">
                                 53
                               </p>
                             </div>
