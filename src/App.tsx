@@ -567,16 +567,20 @@ function App() {
                       <div className="flex flex-col gap-[16px] flex-1">
                         {/* Удовлетворены */}
                         <div className="flex gap-[12px] items-center w-full">
-                          <div className="bg-[#6cae75] h-full rounded-[2px] w-[4px]" />
+                          <div className="flex flex-row items-center self-stretch">
+                            <div className="bg-[#6cae75] h-full rounded-[2px] w-[4px]" />
+                          </div>
                           <div className="flex flex-col gap-[8px] flex-1">
-                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
                               Удовлетворены
                             </p>
                             <div className="flex gap-[12px] items-center justify-center">
                               <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
                                 65%
                               </p>
-                              <div className="bg-[#eeeff1] w-px h-full" />
+                              <div className="flex flex-row items-center self-stretch">
+                                <div className="bg-[#eeeff1] h-full w-px" />
+                              </div>
                               <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
                                 1223
                               </p>
@@ -586,16 +590,18 @@ function App() {
 
                         {/* Нейтральные */}
                         <div className="flex gap-[12px] items-center w-full">
-                          <div className="bg-[#ffa630] h-full rounded-[2px] w-[4px]" />
+                          <div className="flex flex-row items-center self-stretch">
+                            <div className="bg-[#ffa630] h-full rounded-[2px] w-[4px]" />
+                          </div>
                           <div className="flex flex-col gap-[8px] flex-1">
-                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
                               Нейтральные
                             </p>
-                            <div className="flex gap-[12px] items-center">
+                            <div className="flex gap-[12px] items-start">
                               <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
                                 24%
                               </p>
-                              <div className="bg-[#eeeff1] w-px h-full" />
+                              <div className="bg-[#eeeff1] self-stretch w-px" />
                               <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
                                 317
                               </p>
@@ -605,16 +611,20 @@ function App() {
 
                         {/* Критики */}
                         <div className="flex gap-[12px] items-center w-full">
-                          <div className="bg-[#fc4135] h-full rounded-[2px] w-[4px]" />
+                          <div className="flex flex-row items-center self-stretch">
+                            <div className="bg-[#fc4135] h-full rounded-[2px] w-[4px]" />
+                          </div>
                           <div className="flex flex-col gap-[8px] flex-1">
-                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
                               Критики
                             </p>
                             <div className="flex gap-[12px] items-center justify-center">
                               <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
                                 11%
                               </p>
-                              <div className="bg-[#eeeff1] w-px h-full" />
+                              <div className="flex flex-row items-center self-stretch">
+                                <div className="bg-[#eeeff1] h-full w-px" />
+                              </div>
                               <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
                                 53
                               </p>
