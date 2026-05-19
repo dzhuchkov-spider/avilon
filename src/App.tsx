@@ -16,6 +16,7 @@ import CircleGraph2 from './assets/img/Circle-Graph-2.svg';
 
 function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
+  const [activeTab, setActiveTab] = useState('Главная');
   return (
     <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4">
       <div className="w-full max-w-[375px] h-[812px] bg-[#EEF1F1] rounded-[32px] outline outline-[12px] outline-black flex flex-col overflow-hidden font-['Manrope']">
@@ -50,12 +51,13 @@ function App() {
 
         {/* Main Content */}
         <div className="h-[812px] overflow-y-auto" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
-          {/* Title Section */}
-          <div>
-            <div className="flex justify-between items-start mb-4">
-              <h1 className="text-[20px] leading-[28px] text-black" style={{ fontWeight: 600 }}>Сводка на сегодня</h1>
-              <span className="text-[16px] text-[#767676]">13 мая 2026</span>
-            </div>
+          {activeTab === 'Главная' ? (
+            <div>
+              {/* Title Section */}
+              <div className="flex justify-between items-start mb-4">
+                <h1 className="text-[20px] leading-[28px] text-black" style={{ fontWeight: 600 }}>Сводка на сегодня</h1>
+                <span className="text-[16px] text-[#767676]">13 мая 2026</span>
+              </div>
 
             {/* KPI Cards */}
             <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px' }}>
@@ -965,27 +967,40 @@ function App() {
               )}
             </div>
           </div>
-
+          ) : activeTab === 'Риски' ? (
+            <div className="flex items-center justify-center h-full">
+              <p className="text-[#767676] text-[16px]">Экран Риски</p>
+            </div>
+          ) : null}
         </div>
 
         {/* Tab Bar */}
         <div className="flex items-start justify-center pb-[25px] pt-[16px] px-[21px] relative shrink-0 w-full">
           <div className="bg-[#F6F6F6] drop-shadow-[0px_8px_20px_rgba(0,0,0,0.12)] flex flex-1 items-start justify-center min-w-px px-[6px] py-[4px] relative rounded-[100px]">
-            <div className="bg-[#e8e8e8] flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] overflow-clip pb-[7px] pt-[6px] px-[8px] relative rounded-[100px]">
+            <div
+              className={`flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] overflow-clip pb-[7px] pt-[6px] px-[8px] relative rounded-[100px] cursor-pointer ${activeTab === 'Главная' ? 'bg-[#e8e8e8]' : ''}`}
+              onClick={() => setActiveTab('Главная')}
+            >
               <img src={tabHome} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
-              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#00a4ff] text-[10px] text-center tracking-[-0.1px]">
+              <p className={`font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center tracking-[-0.1px] ${activeTab === 'Главная' ? 'text-[#00a4ff]' : 'text-[#3a3b4f]'}`}>
                 Главная
               </p>
             </div>
-            <div className="flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px mr-[-8px] pb-[7px] pt-[6px] px-[8px] relative">
+            <div
+              className={`flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px mr-[-8px] pb-[7px] pt-[6px] px-[8px] relative cursor-pointer ${activeTab === 'Риски' ? 'bg-[#e8e8e8]' : ''}`}
+              onClick={() => setActiveTab('Риски')}
+            >
               <img src={tabRisk} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
-              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#3a3b4f] text-[10px] text-center">
+              <p className={`font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center ${activeTab === 'Риски' ? 'text-[#00a4ff]' : 'text-[#3a3b4f]'}`}>
                 Риски
               </p>
             </div>
-            <div className="flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px pb-[7px] pt-[6px] px-[8px] relative">
+            <div
+              className={`flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px pb-[7px] pt-[6px] px-[8px] relative cursor-pointer ${activeTab === 'Профиль' ? 'bg-[#e8e8e8]' : ''}`}
+              onClick={() => setActiveTab('Профиль')}
+            >
               <img src={tabProfile} alt="" className="relative shrink-0 w-[28px] h-[28px]" />
-              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[#3a3b4f] text-[10px] text-center">
+              <p className={`font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center ${activeTab === 'Профиль' ? 'text-[#00a4ff]' : 'text-[#3a3b4f]'}`}>
                 Профиль
               </p>
             </div>
