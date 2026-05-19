@@ -489,7 +489,7 @@ function App() {
                         </div>
                         <div className="flex flex-col gap-[12px] w-full">
                           <div className="flex items-start w-full">
-                            <img src={LineChart} alt="" className="w-full h-[32px] object-contain" />
+                            <img src={LineChart} alt="" className="w-full h-auto object-contain" />
                           </div>
                           <div className="flex flex-col gap-[8px] w-full">
                             <div className="flex gap-[8px] items-center w-full">
@@ -1030,7 +1030,7 @@ function App() {
                         </div>
                       </div>
                       <div className="flex flex-col items-start w-full">
-                        <img src={LineChart2} alt="" className="w-full h-[20px] object-contain" />
+                        <img src={LineChart2} alt="" className="w-full h-auto object-contain" />
                       </div>
                     </div>
 
@@ -1198,11 +1198,11 @@ function App() {
               </div>
 
               {/* Потенциальный ущерб Section */}
-              <div className="flex flex-col items-start w-full max-md:w-full lg:w-[343px]">
-                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start pb-[16px] pt-[24px] px-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
+              <div className="flex flex-col items-center w-full max-md:w-full lg:w-[343px]">
+                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-center pb-[16px] pt-[24px] px-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   {/* Circle Graph */}
-                  <div className="flex-1 h-[144px]">
-                    <img src={CircleGraph3} alt="" className="w-full h-full object-contain" />
+                  <div className="flex-1 flex items-center justify-center min-h-[144px] w-full">
+                    <img src={CircleGraph3} alt="" className="w-[311px] h-[144px] object-contain" />
                   </div>
 
                   {/* Damage Breakdown */}
