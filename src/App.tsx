@@ -265,7 +265,7 @@ function App() {
                   {/* Finance Cards */}
                   <div className="flex flex-wrap gap-[8px] w-full">
                     {/* Card 1: Выручка */}
-                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px] lg:w-[167.5px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] flex-1 min-w-[calc(50%-4px)] lg:w-[167.5px] lg:flex-none">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         Выручка
                       </p>
@@ -290,7 +290,7 @@ function App() {
                     </div>
 
                     {/* Card 2: EBITDA */}
-                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px] lg:w-[167.5px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] flex-1 min-w-[calc(50%-4px)] lg:w-[167.5px] lg:flex-none">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         EBITDA
                       </p>
@@ -315,7 +315,7 @@ function App() {
                     </div>
 
                     {/* Card 3: Чистая прибыль */}
-                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px] lg:w-[167.5px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] flex-1 min-w-[calc(50%-4px)] lg:w-[167.5px] lg:flex-none">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         Чистая прибыль
                       </p>
@@ -340,7 +340,7 @@ function App() {
                     </div>
 
                     {/* Card 4: Cash Flow */}
-                    <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px] lg:w-[167px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
+                    <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] flex-1 min-w-[calc(50%-4px)] lg:w-[167px] lg:flex-none">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         Cash Flow
                       </p>
