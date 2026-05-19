@@ -1199,21 +1199,12 @@ function App() {
               <div className="flex flex-col items-start w-[343px]">
                 <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start pb-[16px] pt-[24px] px-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   {/* Circle Graph */}
-                  <div className="relative w-[247px] h-[247px] mx-auto">
+                  <div className="w-[247px] h-[247px] mx-auto">
                     <img src={CircleGraph3} alt="" className="w-full h-full" />
-                    <div className="absolute left-1/2 top-[62px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
-                      <div className="font-normal leading-[20px] text-[14px]">
-                        <p className="leading-[20px] mb-0">Потенциальный</p>
-                        <p className="leading-[20px]">ущерб</p>
-                      </div>
-                      <p className="font-semibold leading-[32px] text-[24px]">
-                        1.4 млн ₽
-                      </p>
-                    </div>
                   </div>
 
                   {/* Damage Breakdown */}
-                  <div className="flex flex-col gap-[8px] items-start w-full">
+                  <div className="flex flex-col gap-[16px] items-start w-full">
                     <div className="flex gap-[8px] items-start w-full">
                       <div className="flex items-center py-[4px]">
                         <div className="bg-[#a675a1] h-[12px] rounded-[2px] w-[6px]" />
@@ -1222,7 +1213,7 @@ function App() {
                         <p className="flex-1 font-normal leading-[16px] text-[12px]">
                           Снижение продаж из-за падения конверсии
                         </p>
-                        <p className="font-semibold leading-[20px] text-[14px] text-center whitespace-nowrap">
+                        <p className="font-semibold leading-[20px] text-[14px] text-center whitespace-nowrap" style={{ fontWeight: 600 }}>
                           620 тыс. ₽
                         </p>
                       </div>
@@ -1235,7 +1226,7 @@ function App() {
                         <p className="flex-1 font-normal leading-[16px] text-[12px]">
                           Потери из-за просрочки стратегического проекта
                         </p>
-                        <p className="font-semibold leading-[20px] text-[14px] text-center whitespace-nowrap">
+                        <p className="font-semibold leading-[20px] text-[14px] text-center whitespace-nowrap" style={{ fontWeight: 600 }}>
                           430 тыс. ₽
                         </p>
                       </div>
@@ -1248,7 +1239,7 @@ function App() {
                         <p className="flex-1 font-normal leading-[16px] text-[12px]">
                           Дополнительные операционные расходы и простои
                         </p>
-                        <p className="font-semibold leading-[20px] text-[14px] text-center whitespace-nowrap">
+                        <p className="font-semibold leading-[20px] text-[14px] text-center whitespace-nowrap" style={{ fontWeight: 600 }}>
                           350 тыс. ₽
                         </p>
                       </div>
