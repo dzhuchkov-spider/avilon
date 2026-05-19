@@ -1108,7 +1108,7 @@ function App() {
                   <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
                 </div>
                 <div className="flex gap-[8px] items-start w-full">
-                  <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] rounded-[16px]">
+                  <div className="bg-[#ffffff] flex flex-1 flex-col gap-[16px] items-start p-[16px] rounded-[16px]" style={{ backgroundColor: '#ffffff' }}>
                     <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                       Высокий риск
                     </p>
@@ -1122,7 +1122,7 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-white flex flex-1 flex-col items-start justify-between p-[16px] rounded-[16px] self-stretch">
+                  <div className="bg-[#ffffff] flex flex-1 flex-col items-start justify-between p-[16px] rounded-[16px] self-stretch" style={{ backgroundColor: '#ffffff' }}>
                     <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
                       Средний риск
                     </p>
@@ -1147,7 +1147,7 @@ function App() {
                   </p>
                   <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
                 </div>
-                <div className="bg-white flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
+                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   <div className="flex flex-col gap-[12px] items-start w-full">
                     <div className="flex gap-[8px] items-baseline">
                       <div className="flex gap-[4px] items-baseline text-black text-center whitespace-nowrap">
