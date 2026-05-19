@@ -41,5 +41,22 @@ body {
     min-height: 100vh;
     border-radius: 0;
     outline: none;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Fix tab bar at bottom for mobile */
+  .mobile-tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: #F6F6F6;
+    padding-bottom: calc(25px + env(safe-area-inset-bottom));
+  }
+
+  /* Add padding to main content to avoid overlap with tab bar */
+  .mobile-content {
+    padding-bottom: 140px !important;
   }
 }

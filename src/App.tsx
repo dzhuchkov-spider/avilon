@@ -65,7 +65,7 @@ function App() {
         )}
 
         {/* Main Content */}
-        <div className="h-[812px] overflow-y-auto" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
+        <div className="mobile-content h-[812px] overflow-y-auto" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
           {activeTab === 'Главная' ? (
             <div>
               {/* Title Section */}
@@ -77,7 +77,7 @@ function App() {
             {/* KPI Cards */}
             <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px' }}>
               {/* KPI Card 1 */}
-              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] flex-shrink-0">
+              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] lg:w-[210px] max-md:w-[280px] flex-shrink-0">
                 <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
                   KPI по продажам
                 </p>
@@ -111,7 +111,7 @@ function App() {
               </div>
 
               {/* KPI Card 2 */}
-              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] flex-shrink-0">
+              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] lg:w-[210px] max-md:w-[280px] flex-shrink-0">
                 <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
                   KPI по выручке
                 </p>
@@ -145,7 +145,7 @@ function App() {
               </div>
 
               {/* KPI Card 3 */}
-              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] flex-shrink-0">
+              <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] lg:w-[210px] max-md:w-[280px] flex-shrink-0">
                 <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
                   KPI по прибыли
                 </p>
@@ -255,7 +255,7 @@ function App() {
               {activeChip === 'Финансы' ? (
                 <>
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       Финансы
                     </p>
@@ -265,7 +265,7 @@ function App() {
                   {/* Finance Cards */}
                   <div className="flex flex-wrap gap-[8px] w-full">
                     {/* Card 1: Выручка */}
-                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px] lg:w-[167.5px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         Выручка
                       </p>
@@ -284,13 +284,13 @@ function App() {
                           </p>
                         </div>
                         <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                          <img src={Graphic} alt="" className="w-full h-full" />
+                          <img src={Graphic} alt="" className="w-full h-full object-contain" />
                         </div>
                       </div>
                     </div>
 
                     {/* Card 2: EBITDA */}
-                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px] lg:w-[167.5px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         EBITDA
                       </p>
@@ -309,13 +309,13 @@ function App() {
                           </p>
                         </div>
                         <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                          <img src={Graphic} alt="" className="w-full h-full" />
+                          <img src={Graphic} alt="" className="w-full h-full object-contain" />
                         </div>
                       </div>
                     </div>
 
                     {/* Card 3: Чистая прибыль */}
-                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px]">
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-[167.5px] lg:w-[167.5px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         Чистая прибыль
                       </p>
@@ -334,13 +334,13 @@ function App() {
                           </p>
                         </div>
                         <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                          <img src={Graphic} alt="" className="w-full h-full" />
+                          <img src={Graphic} alt="" className="w-full h-full object-contain" />
                         </div>
                       </div>
                     </div>
 
                     {/* Card 4: Cash Flow */}
-                    <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px]">
+                    <div className="bg-[#FFFFFF] flex flex-col h-[176px] justify-between p-[16px] rounded-[16px] w-[167px] lg:w-[167px] max-md:w-[calc(50%-4px)] max-md:min-w-[150px]">
                       <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
                         Cash Flow
                       </p>
@@ -374,7 +374,7 @@ function App() {
               ) : activeChip === 'Маркетинг' ? (
                 <>
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       Маркетинг
                     </p>
@@ -434,7 +434,7 @@ function App() {
               ) : activeChip === 'Сервис' ? (
                 <>
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       Сервис
                     </p>
@@ -489,7 +489,7 @@ function App() {
                         </div>
                         <div className="flex flex-col gap-[12px] w-full">
                           <div className="flex items-start w-full">
-                            <img src={LineChart} alt="" className="w-full h-[32px]" />
+                            <img src={LineChart} alt="" className="w-full h-[32px] object-contain" />
                           </div>
                           <div className="flex flex-col gap-[8px] w-full">
                             <div className="flex gap-[8px] items-center w-full">
@@ -536,7 +536,7 @@ function App() {
               ) : activeChip === 'Клиентский опыт' ? (
                 <>
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       Клиентский опыт
                     </p>
@@ -550,8 +550,8 @@ function App() {
                     </p>
                     <div className="flex gap-[24px] items-center w-full">
                       {/* Full Circle Graph */}
-                      <div className="relative w-[164px] h-[164px] flex-shrink-0">
-                        <img src={FullCircleGraph} alt="" className="w-full h-full" />
+                      <div className="relative w-[164px] h-[164px] lg:w-[164px] lg:h-[164px] max-md:w-[140px] max-md:h-[140px] flex-shrink-0">
+                        <img src={FullCircleGraph} alt="" className="w-full h-full object-contain" />
                         {/* Center text */}
                         <div className="absolute left-[66px] top-[53px] flex flex-col gap-[2px] items-center justify-center">
                           <p className="font-normal leading-[24px] text-[16px] text-black text-center whitespace-nowrap">
@@ -640,7 +640,7 @@ function App() {
               ) : activeChip === 'HR и ресурсы' ? (
                 <>
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       HR и ресурсы
                     </p>
@@ -717,7 +717,7 @@ function App() {
               ) : activeChip === 'Стратегия' ? (
                 <>
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       Стратегические инициативы
                     </p>
@@ -747,8 +747,8 @@ function App() {
                         </div>
                         <div className="flex flex-col gap-[12px]">
                           <div className="flex items-start">
-                            <div className="bg-[#6cae75] h-[32px] rounded-[8px] w-[218px]" />
-                            <div className="bg-[#ffa630] h-[32px] rounded-[8px] w-[62px]" />
+                            <div className="bg-[#6cae75] h-[32px] rounded-[8px] w-[218px] lg:w-[218px] max-md:flex-1" />
+                            <div className="bg-[#ffa630] h-[32px] rounded-[8px] w-[62px] lg:w-[62px] max-md:flex-1" />
                             <div className="bg-[#fc4135] flex-1 h-[32px] rounded-[6px]" />
                           </div>
                           <div className="flex flex-col gap-[8px]">
@@ -795,7 +795,7 @@ function App() {
                     {/* Card 2: Всего целей */}
                     <div className="bg-[#FFFFFF] flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
                       <div className="h-[124px] overflow-hidden relative w-full">
-                        <img src={CircleGraph2} alt="" className="w-full h-full" />
+                        <img src={CircleGraph2} alt="" className="w-full h-full object-contain" />
                         <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
                           <p className="font-normal leading-[20px] text-[14px]">
                             Всего целей
@@ -902,7 +902,7 @@ function App() {
                 <>
                   {/* Commercial Data from Figma */}
                   {/* Title with arrow */}
-                  <div className="flex gap-[35px] items-center w-[343px]">
+                  <div className="flex gap-[35px] items-center w-full max-md:w-full lg:w-[343px]">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                       Коммерческие данные
                     </p>
@@ -913,7 +913,7 @@ function App() {
                   <div className="bg-[#FFFFFF] flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
                     <div className="h-[124px] overflow-hidden relative w-full">
                       {/* Circle Graph Visualization */}
-                      <img src={CircleGraph} alt="" className="w-full h-full" />
+                      <img src={CircleGraph} alt="" className="w-full h-full object-contain" />
                       {/* Center text */}
                       <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
                         <p className="font-normal leading-[20px] text-[14px]">
@@ -1038,7 +1038,7 @@ function App() {
                         </div>
                       </div>
                       <div className="flex flex-col items-start w-full">
-                        <img src={LineChart2} alt="" className="w-full h-[20px]" />
+                        <img src={LineChart2} alt="" className="w-full h-[20px] object-contain" />
                       </div>
                     </div>
 
@@ -1110,8 +1110,8 @@ function App() {
               </div>
 
               {/* Зоны риска Section */}
-              <div className="flex flex-col gap-[12px] items-start w-[343px]">
-                <div className="flex gap-[35px] items-center w-[343px]">
+              <div className="flex flex-col gap-[12px] items-start w-full max-md:w-full lg:w-[343px]">
+                <div className="flex gap-[35px] items-center w-full">
                   <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                     Зоны риска
                   </p>
@@ -1150,8 +1150,8 @@ function App() {
               </div>
 
               {/* Пороговые нарушения Section */}
-              <div className="flex flex-col gap-[12px] items-start w-[343px]">
-                <div className="flex gap-[35px] items-center w-[343px]">
+              <div className="flex flex-col gap-[12px] items-start w-full max-md:w-full lg:w-[343px]">
+                <div className="flex gap-[35px] items-center w-full">
                   <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
                     Пороговые нарушения
                   </p>
@@ -1206,11 +1206,11 @@ function App() {
               </div>
 
               {/* Потенциальный ущерб Section */}
-              <div className="flex flex-col items-start w-[343px]">
+              <div className="flex flex-col items-start w-full max-md:w-full lg:w-[343px]">
                 <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start pb-[16px] pt-[24px] px-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   {/* Circle Graph */}
                   <div className="flex-1 h-[144px]">
-                    <img src={CircleGraph3} alt="" className="w-full h-full" />
+                    <img src={CircleGraph3} alt="" className="w-full h-full object-contain" />
                   </div>
 
                   {/* Damage Breakdown */}
@@ -1262,7 +1262,7 @@ function App() {
         </div>
 
         {/* Tab Bar */}
-        <div className="flex items-start justify-center pb-[25px] pt-[16px] px-[21px] relative shrink-0 w-full">
+        <div className="mobile-tab-bar flex items-start justify-center pb-[25px] pt-[16px] px-[21px] relative shrink-0 w-full">
           <div className="bg-[#F6F6F6] drop-shadow-[0px_8px_20px_rgba(0,0,0,0.12)] flex flex-1 items-start justify-center min-w-px px-[6px] py-[4px] relative rounded-[100px]">
             <div
               className={`flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] overflow-clip pb-[7px] pt-[6px] px-[8px] relative rounded-[100px] cursor-pointer ${activeTab === 'Главная' ? 'bg-[#e8e8e8]' : ''}`}
