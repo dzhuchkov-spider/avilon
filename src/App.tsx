@@ -1199,7 +1199,7 @@ function App() {
               <div className="flex flex-col items-start w-[343px]">
                 <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start pb-[16px] pt-[24px] px-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   {/* Circle Graph */}
-                  <div className="w-[247px] h-[247px] mx-auto">
+                  <div className="flex-1 h-[144px]">
                     <img src={CircleGraph3} alt="" className="w-full h-full" />
                   </div>
 
