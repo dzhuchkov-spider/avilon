@@ -12,6 +12,7 @@ import Graphic from './assets/img/Graphic.svg';
 import CircleGraph from './assets/img/Circle-Graph.svg';
 import LineChart from './assets/img/Line-Chart.svg';
 import FullCircleGraph from './assets/img/Full-circle-graph.svg';
+import CircleGraph2 from './assets/img/Circle-Graph-2.svg';
 
 function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
@@ -222,8 +223,11 @@ function App() {
                   HR и ресурсы
                 </p>
               </div>
-              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
-                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+              <div
+                className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Стратегия' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
+                onClick={() => setActiveChip('Стратегия')}
+              >
+                <p className={`leading-[20px] text-[14px] whitespace-nowrap ${activeChip === 'Стратегия' ? 'font-medium text-[#3a3b4f]' : 'font-normal text-black'}`}>
                   Стратегия
                 </p>
               </div>
@@ -677,6 +681,190 @@ function App() {
                       <div className="flex flex-col flex-[1_0_0] items-start justify-end w-full">
                         <div className="bg-[#d8ebfb] flex-[1_0_0] mb-[-27px] rounded-[8px] w-full" />
                         <div className="bg-[#00a4ff] h-[27px] rounded-[8px] shrink-0 w-full" />
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : activeChip === 'Стратегия' ? (
+                <>
+                  {/* Title with arrow */}
+                  <div className="flex gap-[35px] items-center w-[343px]">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      Стратегические инициативы
+                    </p>
+                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                  </div>
+
+                  {/* Strategy Cards */}
+                  <div className="flex flex-col gap-[12px] w-full">
+                    {/* Card 1: Достижение стратегических целей */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-full">
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Достижение стратегических целей
+                      </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex gap-[8px] items-baseline">
+                          <div className="flex gap-[4px] items-baseline text-black">
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              65
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              %
+                            </p>
+                          </div>
+                          <p className="font-medium leading-[24px] text-[#00c03f] text-[16px]">
+                            +1%
+                          </p>
+                        </div>
+                        <div className="flex flex-col gap-[12px]">
+                          <div className="flex items-start">
+                            <div className="bg-[#6cae75] h-[32px] rounded-[8px] w-[218px]" />
+                            <div className="bg-[#ffa630] h-[32px] rounded-[8px] w-[62px]" />
+                            <div className="bg-[#fc4135] flex-1 h-[32px] rounded-[6px]" />
+                          </div>
+                          <div className="flex flex-col gap-[8px]">
+                            <div className="flex gap-[8px] items-center">
+                              <div className="bg-[#6cae75] h-[12px] rounded-[2px] w-[6px]" />
+                              <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                                <p className="font-normal leading-[16px] text-[12px]">
+                                  Выполнено
+                                </p>
+                                <p className="font-semibold leading-[20px] text-[14px]">
+                                  65%
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex gap-[8px] items-center">
+                              <div className="bg-[#ffa630] h-[12px] rounded-[2px] w-[6px]" />
+                              <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                                <p className="font-normal leading-[16px] text-[12px]">
+                                  В работе
+                                </p>
+                                <p className="font-semibold leading-[20px] text-[14px]">
+                                  24%
+                                </p>
+                              </div>
+                            </div>
+                            <div className="flex gap-[8px] items-center">
+                              <div className="bg-[#fc4135] h-[12px] rounded-[2px] w-[6px]" />
+                              <div className="flex flex-1 items-center justify-between">
+                                <p className="font-normal leading-[16px] text-[12px] text-black text-center whitespace-nowrap">
+                                  Риск
+                                </p>
+                                <div className="flex gap-[16px] items-center">
+                                  <p className="font-semibold leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                                    11%
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Card 2: Всего целей */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
+                      <div className="h-[124px] overflow-hidden relative w-full">
+                        <img src={CircleGraph2} alt="" className="w-full h-full" />
+                        <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
+                          <p className="font-normal leading-[20px] text-[14px]">
+                            Всего целей
+                          </p>
+                          <p className="font-semibold leading-[32px] text-[24px]">
+                            26
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-[8px] w-full">
+                        <div className="flex gap-[8px] items-center">
+                          <div className="bg-[#6cae75] h-[12px] rounded-[2px] w-[6px]" />
+                          <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px]">
+                              Выполнены
+                            </p>
+                            <p className="font-semibold leading-[20px] text-[14px]">
+                              18
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex gap-[8px] items-center">
+                          <div className="bg-[#ffa630] h-[12px] rounded-[2px] w-[6px]" />
+                          <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px]">
+                              В процессе
+                            </p>
+                            <p className="font-semibold leading-[20px] text-[14px]">
+                              6
+                            </p>
+                          </div>
+                        </div>
+                        <div className="flex gap-[8px] items-center">
+                          <div className="bg-[#fc4135] h-[12px] rounded-[2px] w-[6px]" />
+                          <div className="flex flex-1 items-center justify-between text-black text-center whitespace-nowrap">
+                            <p className="font-normal leading-[16px] text-[12px]">
+                              В зоне риска
+                            </p>
+                            <p className="font-semibold leading-[20px] text-[14px]">
+                              2
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Card 3: Two small cards */}
+                    <div className="flex gap-[8px] w-full">
+                      {/* Конкурентное позиционирование */}
+                      <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] flex-1">
+                        <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                          Конкурентное
+                          <br />
+                          позиционирование
+                        </p>
+                        <div className="flex flex-col gap-[12px]">
+                          <div className="flex gap-[4px] items-baseline text-black text-center whitespace-nowrap">
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              #2
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              на рынке
+                            </p>
+                          </div>
+                          <div className="flex flex-col gap-[4px]">
+                            <p className="font-normal leading-[16px] text-[#818587] text-[12px] whitespace-nowrap">
+                              Рост доли рынка
+                            </p>
+                            <div className="flex gap-[4px] items-center">
+                              <img src={arrowUp} alt="" className="w-[16px] h-[16px]" />
+                              <p className="font-normal leading-[16px] text-[#00c03f] text-[12px] text-center whitespace-nowrap">
+                                +4%
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Индекс изменений */}
+                      <div className="bg-[#FFFFFF] flex flex-col justify-between p-[16px] rounded-[16px] flex-1">
+                        <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                          Индекс изменений
+                        </p>
+                        <div className="flex flex-col gap-[12px]">
+                          <div className="flex gap-[8px] items-baseline text-center whitespace-nowrap">
+                            <div className="flex gap-[4px] items-baseline text-black">
+                              <p className="font-semibold leading-[32px] text-[24px]">
+                                83
+                              </p>
+                              <p className="font-normal leading-[20px] text-[14px]">
+                                %
+                              </p>
+                            </div>
+                            <p className="font-medium leading-[24px] text-[#00c03f] text-[16px]">
+                              +0.6%
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
