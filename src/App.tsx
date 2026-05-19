@@ -1258,7 +1258,7 @@ function App() {
               className={`flex flex-1 flex-col gap-px items-center justify-center min-w-px mr-[-8px] overflow-clip pb-[7px] pt-[6px] px-[8px] relative rounded-[100px] cursor-pointer ${activeTab === 'Главная' ? 'bg-[#e8e8e8]' : ''}`}
               onClick={() => setActiveTab('Главная')}
             >
-              <img src={tabHome} alt="" className={`relative shrink-0 w-[28px] h-[28px] ${activeTab === 'Главная' ? '' : 'opacity-60'}`} style={{ filter: activeTab === 'Главная' ? 'brightness(0) saturate(100%) invert(34%) sepia(89%) saturate(2476%) hue-rotate(183deg) brightness(101%) contrast(101%)' : 'brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(727%) hue-rotate(203deg) brightness(95%) contrast(90%)' }} />
+              <img src={tabHome} alt="" className="relative shrink-0 w-[28px] h-[28px]" style={{ filter: activeTab === 'Главная' ? 'brightness(0) saturate(100%) invert(34%) sepia(89%) saturate(2476%) hue-rotate(183deg) brightness(101%) contrast(101%)' : 'brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(727%) hue-rotate(203deg) brightness(95%) contrast(90%)' }} />
               <p className={`font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center tracking-[-0.1px] ${activeTab === 'Главная' ? 'text-[#00a4ff]' : 'text-[#3a3b4f]'}`}>
                 Главная
               </p>
@@ -1267,7 +1267,7 @@ function App() {
               className={`flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px mr-[-8px] pb-[7px] pt-[6px] px-[8px] relative rounded-[100px] cursor-pointer ${activeTab === 'Риски' ? 'bg-[#e8e8e8]' : ''}`}
               onClick={() => setActiveTab('Риски')}
             >
-              <img src={tabRisk} alt="" className={`relative shrink-0 w-[28px] h-[28px] ${activeTab === 'Риски' ? '' : 'opacity-60'}`} style={{ filter: activeTab === 'Риски' ? 'brightness(0) saturate(100%) invert(34%) sepia(89%) saturate(2476%) hue-rotate(183deg) brightness(101%) contrast(101%)' : 'brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(727%) hue-rotate(203deg) brightness(95%) contrast(90%)' }} />
+              <img src={tabRisk} alt="" className="relative shrink-0 w-[28px] h-[28px]" style={{ filter: activeTab === 'Риски' ? 'brightness(0) saturate(100%) invert(34%) sepia(89%) saturate(2476%) hue-rotate(183deg) brightness(101%) contrast(101%)' : 'brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(727%) hue-rotate(203deg) brightness(95%) contrast(90%)' }} />
               <p className={`font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center ${activeTab === 'Риски' ? 'text-[#00a4ff]' : 'text-[#3a3b4f]'}`}>
                 Риски
               </p>
