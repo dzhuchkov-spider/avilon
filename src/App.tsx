@@ -14,6 +14,7 @@ import LineChart from './assets/img/Line-Chart.svg';
 import FullCircleGraph from './assets/img/Full-circle-graph.svg';
 import CircleGraph2 from './assets/img/Circle-Graph-2.svg';
 import CircleGraph3 from './assets/img/Circle-Graph-3.svg';
+import LineChart2 from './assets/img/Line-Chart-2.svg';
 
 function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
@@ -1025,10 +1026,7 @@ function App() {
                         </div>
                       </div>
                       <div className="flex flex-col items-start w-full">
-                        <div className="flex isolate items-start w-full">
-                          <div className="bg-[#fc4135] h-[20px] mr-[-40px] rounded-[20px] w-[242px] z-[2]" />
-                          <div className="bg-white flex-1 h-[20px] min-w-px rounded-[20px] z-[1]" />
-                        </div>
+                        <img src={LineChart2} alt="" className="w-full h-[20px]" />
                       </div>
                     </div>
 
