@@ -11,6 +11,7 @@ import arrowDown from './assets/icons/arrow-down.svg';
 import Graphic from './assets/img/Graphic.svg';
 import CircleGraph from './assets/img/Circle-Graph.svg';
 import LineChart from './assets/img/Line-Chart.svg';
+import FullCircleGraph from './assets/img/Full-circle-graph.svg';
 
 function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
@@ -205,8 +206,11 @@ function App() {
                   Сервис
                 </p>
               </div>
-              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
-                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+              <div
+                className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Клиентский опыт' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
+                onClick={() => setActiveChip('Клиентский опыт')}
+              >
+                <p className={`leading-[20px] text-[14px] whitespace-nowrap ${activeChip === 'Клиентский опыт' ? 'font-medium text-[#3a3b4f]' : 'font-normal text-black'}`}>
                   Клиентский опыт
                 </p>
               </div>
@@ -498,6 +502,98 @@ function App() {
                                   </p>
                                 </div>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : activeChip === 'Клиентский опыт' ? (
+                <>
+                  {/* Title with arrow */}
+                  <div className="flex gap-[35px] items-center w-[343px]">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      Клиентский опыт
+                    </p>
+                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                  </div>
+
+                  {/* Customer Experience Card */}
+                  <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-full">
+                    <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                      Потребительская лояльность
+                    </p>
+                    <div className="flex gap-[24px] items-center w-full">
+                      {/* Full Circle Graph */}
+                      <div className="relative w-[164px] h-[164px] flex-shrink-0">
+                        <img src={FullCircleGraph} alt="" className="w-full h-full" />
+                        {/* Center text */}
+                        <div className="absolute left-[66px] top-[53px] flex flex-col gap-[2px] items-center justify-center">
+                          <p className="font-normal leading-[24px] text-[16px] text-black text-center whitespace-nowrap">
+                            NPS
+                          </p>
+                          <p className="font-semibold leading-[32px] text-[24px] text-black text-center whitespace-nowrap">
+                            48
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Stats */}
+                      <div className="flex flex-col gap-[16px] flex-1">
+                        {/* Удовлетворены */}
+                        <div className="flex gap-[12px] items-center w-full">
+                          <div className="bg-[#6cae75] h-full rounded-[2px] w-[4px]" />
+                          <div className="flex flex-col gap-[8px] flex-1">
+                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
+                              Удовлетворены
+                            </p>
+                            <div className="flex gap-[12px] items-center justify-center">
+                              <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
+                                65%
+                              </p>
+                              <div className="bg-[#eeeff1] w-px h-full" />
+                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
+                                1223
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Нейтральные */}
+                        <div className="flex gap-[12px] items-center w-full">
+                          <div className="bg-[#ffa630] h-full rounded-[2px] w-[4px]" />
+                          <div className="flex flex-col gap-[8px] flex-1">
+                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
+                              Нейтральные
+                            </p>
+                            <div className="flex gap-[12px] items-center">
+                              <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
+                                24%
+                              </p>
+                              <div className="bg-[#eeeff1] w-px h-full" />
+                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
+                                317
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Критики */}
+                        <div className="flex gap-[12px] items-center w-full">
+                          <div className="bg-[#fc4135] h-full rounded-[2px] w-[4px]" />
+                          <div className="flex flex-col gap-[8px] flex-1">
+                            <p className="font-normal leading-[16px] text-[12px] text-black whitespace-nowrap">
+                              Критики
+                            </p>
+                            <div className="flex gap-[12px] items-center justify-center">
+                              <p className="font-medium leading-[20px] text-[14px] text-black w-[35px]">
+                                11%
+                              </p>
+                              <div className="bg-[#eeeff1] w-px h-full" />
+                              <p className="font-normal leading-[20px] text-[#818587] text-[14px] text-center whitespace-nowrap">
+                                53
+                              </p>
                             </div>
                           </div>
                         </div>
