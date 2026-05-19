@@ -906,15 +906,6 @@ function App() {
                     <div className="h-[124px] overflow-hidden relative w-full">
                       {/* Circle Graph Visualization */}
                       <img src={CircleGraph} alt="" className="w-full h-full object-contain" />
-                      {/* Center text */}
-                      <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
-                        <p className="font-normal leading-[20px] text-[14px]">
-                          Всего лидов
-                        </p>
-                        <p className="font-semibold leading-[32px] text-[24px]">
-                          128
-                        </p>
-                      </div>
                     </div>
 
                     {/* Legend */}
