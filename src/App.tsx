@@ -1051,21 +1051,12 @@ function App() {
                               Просрочка
                             </p>
                             <p className="font-semibold leading-[32px] text-[#ff4c4c] text-[24px]">
-                              4
+                              45
                             </p>
-                            <p className="font-normal leading-[20px] text-[14px] text-black">
-                              дня
+                            <p className="font-normal leading-[20px] text-[#ff4c4c] text-[14px]">
+                              дней
                             </p>
                           </div>
-                          <p className="font-medium leading-[24px] text-[#818587] text-[16px]">
-                            +0%
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex flex-col items-start w-full">
-                        <div className="flex isolate items-start w-full">
-                          <div className="bg-[#ff4c4c] h-[20px] mr-[-40px] rounded-[20px] w-[242px] z-[2]" />
-                          <div className="bg-white flex-1 h-[20px] min-w-px rounded-[20px] z-[1]" />
                         </div>
                       </div>
                     </div>
@@ -1076,34 +1067,31 @@ function App() {
                         <p className="font-medium leading-[24px] text-[16px] text-black w-full">
                           Рост стоимости привлечения клиента
                         </p>
-                        <div className="flex gap-[8px] items-start w-full">
-                          <p className="flex-1 font-normal leading-[20px] text-[#818587] text-[14px]">
-                            Базовая стоимость: 2 500 ₽
+                        <div className="flex gap-[8px] items-start leading-[20px] text-[14px] w-full">
+                          <p className="flex-1 font-normal text-[#818587]">
+                            План: 1 300 ₽
+                          </p>
+                          <p className="font-semibold text-black whitespace-nowrap">
+                            Сейчас: 1 794 ₽
                           </p>
                         </div>
                       </div>
                       <div className="flex flex-col gap-[12px] items-start w-full">
-                        <div className="flex gap-[8px] items-baseline">
-                          <div className="flex gap-[4px] items-baseline whitespace-nowrap">
-                            <p className="font-normal leading-[20px] text-[14px] text-black">
-                              Рост
+                        <div className="flex gap-[8px] items-baseline whitespace-nowrap">
+                          <div className="flex gap-[4px] items-baseline text-black">
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              Удорожание
                             </p>
-                            <p className="font-semibold leading-[32px] text-[#ff4c4c] text-[24px]">
-                              18
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              38
                             </p>
-                            <p className="font-normal leading-[20px] text-[14px] text-black">
+                            <p className="font-normal leading-[20px] text-[14px]">
                               %
                             </p>
                           </div>
-                          <p className="font-medium leading-[24px] text-[#818587] text-[16px]">
+                          <p className="font-medium leading-[24px] text-[#ff4c4c] text-[16px]">
                             +2%
                           </p>
-                        </div>
-                      </div>
-                      <div className="flex flex-col items-start w-full">
-                        <div className="flex isolate items-start w-full">
-                          <div className="bg-[#ff4c4c] h-[20px] mr-[-40px] rounded-[20px] w-[242px] z-[2]" />
-                          <div className="bg-white flex-1 h-[20px] min-w-px rounded-[20px] z-[1]" />
                         </div>
                       </div>
                     </div>
@@ -1111,16 +1099,105 @@ function App() {
                 </div>
               </div>
 
-              {/* Потенциальный ущерб Section */}
-              <div className="flex flex-col items-start w-full">
-                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
-                  <div className="flex gap-[8px] items-center w-full">
-                    <p className="font-normal leading-[24px] text-[16px] text-black flex-1">
-                      Потенциальный ущерб
+              {/* Зоны риска Section */}
+              <div className="flex flex-col gap-[12px] items-start w-[343px]">
+                <div className="flex gap-[35px] items-center w-[343px]">
+                  <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                    Зоны риска
+                  </p>
+                  <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                </div>
+                <div className="flex gap-[8px] items-start w-full">
+                  <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] rounded-[16px]">
+                    <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                      Высокий риск
                     </p>
-                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                    <div className="flex flex-col gap-[12px] items-start w-full">
+                      <div className="flex items-center">
+                        <div className="flex gap-[4px] items-baseline">
+                          <p className="font-semibold leading-[32px] text-[#ff1834] text-[24px] text-center whitespace-nowrap">
+                            2
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                  <div className="bg-white flex flex-1 flex-col items-start justify-between p-[16px] rounded-[16px] self-stretch">
+                    <p className="font-normal leading-[20px] text-[14px] text-black text-center whitespace-nowrap">
+                      Средний риск
+                    </p>
+                    <div className="flex flex-col gap-[12px] items-start w-full">
+                      <div className="flex gap-[8px] items-baseline">
+                        <div className="flex gap-[4px] items-baseline">
+                          <p className="font-semibold leading-[32px] text-[#ffa630] text-[24px] text-center whitespace-nowrap">
+                            5
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              {/* Пороговые нарушения Section */}
+              <div className="flex flex-col gap-[12px] items-start w-[343px]">
+                <div className="flex gap-[35px] items-center w-[343px]">
+                  <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                    Пороговые нарушения
+                  </p>
+                  <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                </div>
+                <div className="bg-white flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
+                  <div className="flex flex-col gap-[12px] items-start w-full">
+                    <div className="flex gap-[8px] items-baseline">
+                      <div className="flex gap-[4px] items-baseline text-black text-center whitespace-nowrap">
+                        <p className="font-semibold leading-[32px] text-[24px]">
+                          4
+                        </p>
+                        <p className="font-normal leading-[20px] text-[14px]">
+                          всего
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-[12px] items-start w-full">
+                    <div className="bg-[#f3f8fc] flex flex-col gap-[12px] items-start p-[12px] rounded-[12px] w-full">
+                      <div className="flex flex-col gap-[8px] items-start w-full">
+                        <p className="font-normal leading-[20px] text-[14px] text-black w-full">
+                          SLA обработки заявок превышен на 18%
+                        </p>
+                      </div>
+                    </div>
+                    <div className="bg-[#f3f8fc] flex flex-col gap-[12px] items-start p-[12px] rounded-[12px] w-full">
+                      <div className="flex flex-col gap-[8px] items-start w-full">
+                        <p className="font-normal leading-[20px] text-[14px] text-black w-full">
+                          Загрузка сервиса: 97%
+                        </p>
+                      </div>
+                    </div>
+                    <div className="bg-[#f3f8fc] flex flex-col gap-[12px] items-start p-[12px] rounded-[12px] w-full">
+                      <div className="flex flex-col gap-[8px] items-start w-full">
+                        <p className="font-normal leading-[20px] text-[14px] text-black w-full">
+                          Текучесть ключевого персонала выше нормы на 6 %
+                        </p>
+                      </div>
+                    </div>
+                    <div className="bg-[#f3f8fc] flex flex-col gap-[12px] items-start p-[12px] rounded-[12px] w-full">
+                      <div className="flex flex-col gap-[8px] items-start w-full">
+                        <p className="font-normal leading-[20px] text-[14px] text-black w-full">
+                          Конверсия лендинга упала ниже цели
+                          <br />
+                          на 1.2 %
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Потенциальный ущерб Section */}
+              <div className="flex flex-col items-start w-[343px]">
+                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start pb-[16px] pt-[24px] px-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   {/* Circle Graph */}
                   <div className="relative w-[247px] h-[247px] mx-auto">
                     <img src={CircleGraph3} alt="" className="w-full h-full" />
