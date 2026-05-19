@@ -22,3 +22,24 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Desktop container styles - apply only on screens 1024px and wider */
+@media (min-width: 1024px) {
+  .desktop-container {
+    max-width: 375px;
+    height: 812px;
+    border-radius: 32px;
+    outline: 12px solid black;
+  }
+}
+
+/* Mobile styles - apply on screens smaller than 1024px */
+@media (max-width: 1023px) {
+  .desktop-container {
+    max-width: none;
+    height: auto;
+    min-height: 100vh;
+    border-radius: 0;
+    outline: none;
+  }
+}

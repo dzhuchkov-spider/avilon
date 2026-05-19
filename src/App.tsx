@@ -20,8 +20,8 @@ function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
   const [activeTab, setActiveTab] = useState('Главная');
   return (
-    <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4">
-      <div className="w-full max-w-[375px] h-[812px] bg-[#EEF1F1] rounded-[32px] outline outline-[12px] outline-black flex flex-col overflow-hidden font-['Manrope']">
+    <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4 lg:p-8">
+      <div className="desktop-container w-full bg-[#EEF1F1] flex flex-col overflow-hidden font-['Manrope']">
         {/* Status Bar */}
         <div className="flex gap-[154px] items-center justify-center pb-[19px] pt-[21px] px-[16px] relative shrink-0 w-full">
           <div className="flex flex-[1_0_0] h-[22px] items-center justify-center min-w-px pt-[1.5px] relative">
