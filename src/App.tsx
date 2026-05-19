@@ -283,8 +283,8 @@ function App() {
                             +4%
                           </p>
                         </div>
-                        <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                          <img src={Graphic} alt="" className="w-full h-full object-contain" />
+                        <div className="flex h-[64px] lg:h-[64px] max-md:h-auto min-h-[50px] overflow-hidden rounded-bl-[8px] rounded-br-[8px] w-full items-center justify-center">
+                          <img src={Graphic} alt="" className="w-full h-auto object-contain" />
                         </div>
                       </div>
                     </div>
@@ -308,8 +308,8 @@ function App() {
                             +1%
                           </p>
                         </div>
-                        <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                          <img src={Graphic} alt="" className="w-full h-full object-contain" />
+                        <div className="flex h-[64px] lg:h-[64px] max-md:h-auto min-h-[50px] overflow-hidden rounded-bl-[8px] rounded-br-[8px] w-full items-center justify-center">
+                          <img src={Graphic} alt="" className="w-full h-auto object-contain" />
                         </div>
                       </div>
                     </div>
@@ -333,8 +333,8 @@ function App() {
                             +2%
                           </p>
                         </div>
-                        <div className="h-[64px] overflow-hidden rounded-bl-[8px] rounded-br-[8px]">
-                          <img src={Graphic} alt="" className="w-full h-full object-contain" />
+                        <div className="flex h-[64px] lg:h-[64px] max-md:h-auto min-h-[50px] overflow-hidden rounded-bl-[8px] rounded-br-[8px] w-full items-center justify-center">
+                          <img src={Graphic} alt="" className="w-full h-auto object-contain" />
                         </div>
                       </div>
                     </div>
@@ -796,14 +796,6 @@ function App() {
                     <div className="bg-[#FFFFFF] flex flex-col gap-[16px] items-start pt-[24px] pb-[16px] px-[16px] rounded-[16px] w-full">
                       <div className="h-[124px] overflow-hidden relative w-full">
                         <img src={CircleGraph2} alt="" className="w-full h-full object-contain" />
-                        <div className="absolute left-1/2 top-[70px] -translate-x-1/2 flex flex-col gap-[2px] items-center justify-center text-black text-center whitespace-nowrap">
-                          <p className="font-normal leading-[20px] text-[14px]">
-                            Всего целей
-                          </p>
-                          <p className="font-semibold leading-[32px] text-[24px]">
-                            26
-                          </p>
-                        </div>
                       </div>
                       <div className="flex flex-col gap-[8px] w-full">
                         <div className="flex gap-[8px] items-center">
