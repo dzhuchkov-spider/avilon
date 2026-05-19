@@ -982,7 +982,7 @@ function App() {
             </div>
           </div>
           ) : activeTab === 'Риски' ? (
-            <div className="flex flex-col gap-[24px] items-start" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
+            <div className="flex flex-col gap-[24px] items-start">
               {/* Критические отклонения Section */}
               <div className="flex flex-col items-start w-full">
                 <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
