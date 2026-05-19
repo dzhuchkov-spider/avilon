@@ -214,8 +214,11 @@ function App() {
                   Клиентский опыт
                 </p>
               </div>
-              <div className="bg-[#FFFFFF] flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0">
-                <p className="font-normal leading-[20px] text-black text-[14px] whitespace-nowrap">
+              <div
+                className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'HR и ресурсы' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
+                onClick={() => setActiveChip('HR и ресурсы')}
+              >
+                <p className={`leading-[20px] text-[14px] whitespace-nowrap ${activeChip === 'HR и ресурсы' ? 'font-medium text-[#3a3b4f]' : 'font-normal text-black'}`}>
                   HR и ресурсы
                 </p>
               </div>
@@ -597,6 +600,83 @@ function App() {
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : activeChip === 'HR и ресурсы' ? (
+                <>
+                  {/* Title with arrow */}
+                  <div className="flex gap-[35px] items-center w-[343px]">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      HR и ресурсы
+                    </p>
+                    <img src={arrowRight} alt="" className="w-[24px] h-[24px]" />
+                  </div>
+
+                  {/* HR Cards */}
+                  <div className="flex gap-[8px] w-full">
+                    {/* Left column */}
+                    <div className="flex flex-col gap-[8px] flex-1">
+                      {/* Card 1: Общая текучка */}
+                      <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-full">
+                        <p className="font-normal leading-[20px] text-[14px] text-black whitespace-nowrap">
+                          Общая текучка
+                        </p>
+                        <div className="flex flex-col gap-[12px]">
+                          <div className="flex gap-[4px] items-baseline">
+                            <p className="font-semibold leading-[32px] text-[24px] text-black">
+                              14
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px] text-black">
+                              %
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Card 2: Текучка ключевого персонала */}
+                      <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] w-full">
+                        <p className="font-normal leading-[20px] text-[14px] text-black w-full">
+                          Текучка ключевого персонала
+                        </p>
+                        <div className="flex flex-col gap-[12px]">
+                          <div className="flex gap-[4px] items-baseline text-[#10c44b]">
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              6
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              %
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right column */}
+                    <div className="bg-[#FFFFFF] flex flex-col gap-[16px] p-[16px] rounded-[16px] flex-1">
+                      <p className="font-normal leading-[20px] text-[14px] text-black w-full whitespace-pre-wrap">
+                        Соотношение
+ФОТ к выручке
+                      </p>
+                      <div className="flex flex-col gap-[12px]">
+                        <div className="flex gap-[8px] items-baseline">
+                          <div className="flex gap-[4px] items-baseline text-black">
+                            <p className="font-semibold leading-[32px] text-[24px]">
+                              28
+                            </p>
+                            <p className="font-normal leading-[20px] text-[14px]">
+                              %
+                            </p>
+                          </div>
+                          <p className="font-medium leading-[24px] text-[#00c03f] text-[16px]">
+                            -0.6%
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col flex-[1_0_0] items-start justify-end w-full">
+                        <div className="bg-[#d8ebfb] flex-[1_0_0] mb-[-27px] rounded-[8px] w-full" />
+                        <div className="bg-[#00a4ff] h-[27px] rounded-[8px] shrink-0 w-full" />
                       </div>
                     </div>
                   </div>
