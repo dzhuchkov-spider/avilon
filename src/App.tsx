@@ -985,7 +985,7 @@ function App() {
             <div className="flex flex-col gap-[24px] items-start" style={{ paddingLeft: '16px', paddingRight: '16px', paddingTop: '16px', paddingBottom: '16px' }}>
               {/* Критические отклонения Section */}
               <div className="flex flex-col items-start w-full">
-                <div className="bg-white flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
+                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   <p className="font-normal leading-[24px] text-[16px] text-black w-full">
                     Критические отклонения
                   </p>
@@ -1113,7 +1113,7 @@ function App() {
 
               {/* Потенциальный ущерб Section */}
               <div className="flex flex-col items-start w-full">
-                <div className="bg-white flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full">
+                <div className="bg-[#ffffff] flex flex-col gap-[16px] items-start p-[16px] rounded-[16px] w-full" style={{ backgroundColor: '#ffffff' }}>
                   <div className="flex gap-[8px] items-center w-full">
                     <p className="font-normal leading-[24px] text-[16px] text-black flex-1">
                       Потенциальный ущерб
