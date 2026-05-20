@@ -1260,7 +1260,7 @@ function App() {
           ) : activeTab === 'Профиль' ? (
             <div className="flex flex-col gap-[40px] items-start">
               {/* Profile Photo Section */}
-              <div className="flex flex-col gap-[16px] items-center px-[16px] py-[16px] relative rounded-[16px] w-full">
+              <div className="flex flex-col gap-[16px] items-center px-[16px] py-0 relative rounded-[16px] w-full">
                 <div className="relative shrink-0 size-[128px]">
                   <img src={Photo} alt="" className="w-full h-full object-cover rounded-full" />
                 </div>
