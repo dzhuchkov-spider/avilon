@@ -1316,7 +1316,7 @@ function App() {
               </div>
 
               {/* Общие настройки Section */}
-              <div className="flex flex-col gap-[24px] items-start">
+              <div className="flex flex-col gap-[24px] items-start w-full">
                 <div className="flex flex-col gap-[12px] items-start w-full">
                   <div className="flex gap-[35px] items-center w-full">
                     <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
