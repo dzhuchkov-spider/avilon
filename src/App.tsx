@@ -28,11 +28,29 @@ function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
   const [activeTab, setActiveTab] = useState('Главная');
 
-  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    if (e.currentTarget.scrollWidth > e.currentTarget.clientWidth) {
-      e.preventDefault();
-      e.currentTarget.scrollLeft += e.deltaY;
-    }
+  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    const slider = e.currentTarget;
+    slider.style.cursor = 'grabbing';
+    slider.style.userSelect = 'none';
+
+    const startX = e.pageX - slider.offsetLeft;
+    const scrollLeft = slider.scrollLeft;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleMouseUp = () => {
+      slider.style.cursor = 'grab';
+      slider.style.userSelect = '';
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
   };
 
   return (
@@ -91,7 +109,7 @@ function App() {
               </div>
 
             {/* KPI Cards */}
-            <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px' }} onWheel={handleWheel}>
+            <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px', cursor: 'grab' }} onMouseDown={handleMouseDown}>
               {/* KPI Card 1 */}
               <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] lg:w-[210px] max-md:w-[280px] flex-shrink-0">
                 <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
@@ -205,7 +223,7 @@ function App() {
             </div>
 
             {/* Chips Line */}
-            <div className="flex gap-[8px] overflow-x-auto" style={{ gap: '8px' }} onWheel={handleWheel}>
+            <div className="flex gap-[8px] overflow-x-auto" style={{ gap: '8px', cursor: 'grab' }} onMouseDown={handleMouseDown}>
               {/* Active Chip */}
               <div
                 className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Финансы' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
