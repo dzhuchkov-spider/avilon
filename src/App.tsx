@@ -15,6 +15,14 @@ import FullCircleGraph from './assets/img/Full-circle-graph.svg';
 import CircleGraph2 from './assets/img/Circle-Graph-2.svg';
 import CircleGraph3 from './assets/img/Circle-Graph-3.svg';
 import LineChart2 from './assets/img/Line-Chart-2.svg';
+import kpiIcon from './assets/icons/kpi.svg';
+import mainScrIcon from './assets/icons/main-scr.svg';
+import widgetIcon from './assets/icons/widget.svg';
+import filterIcon from './assets/icons/Filter.svg';
+import periodIcon from './assets/icons/Period.svg';
+import nitificationIcon from './assets/icons/Notification.svg';
+import exitIcon from './assets/icons/exit.svg';
+import Photo from './assets/img/Photo.png';
 
 function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
@@ -43,14 +51,14 @@ function App() {
         </div>
 
         {/* Header */}
-        {activeTab === 'Риски' ? (
+        {activeTab === 'Риски' || activeTab === 'Профиль' ? (
           <div className="flex gap-[10px] items-start justify-center pb-[10px] px-[16px] relative shrink-0 w-full">
             <div className="flex flex-[1_0_0] gap-[10px] h-[44px] items-center min-w-px relative" />
             <div className="relative self-stretch shrink-0 w-[8px]" />
             <div className="flex flex-[1_0_0] gap-[10px] h-[44px] items-center justify-end min-w-px relative" />
             <div className="absolute left-1/2 top-0 -translate-x-1/2 flex flex-col h-[38px] items-center justify-center pt-[6px] w-[250px]">
               <p className="font-semibold leading-[18px] text-[15px] text-[#1a1a1a] text-center tracking-[-0.23px] whitespace-nowrap">
-                Риски для бизнеса
+                {activeTab === 'Риски' ? 'Риски для бизнеса' : 'Профиль'}
               </p>
             </div>
           </div>
@@ -1249,6 +1257,96 @@ function App() {
                 </div>
               </div>
             </div>
+          ) : activeTab === 'Профиль' ? (
+            <div className="flex flex-col gap-[40px] items-start">
+              {/* Profile Photo Section */}
+              <div className="bg-[#ffffff] flex flex-col gap-[16px] items-center px-[16px] py-[16px] relative rounded-[16px] w-full">
+                <div className="relative shrink-0 size-[128px]">
+                  <img src={Photo} alt="" className="w-full h-full object-cover rounded-full" />
+                </div>
+                <div className="flex flex-col gap-[4px] items-center">
+                  <p className="font-medium leading-[24px] text-[16px] text-black">
+                    Артемов Алексей
+                  </p>
+                  <p className="font-normal leading-[20px] text-[14px] text-[#818587]">
+                    Ведущий менеджер
+                  </p>
+                </div>
+              </div>
+
+              {/* Персонализация интерфейса Section */}
+              <div className="flex flex-col gap-[12px] items-start w-full">
+                <div className="flex gap-[35px] items-center w-full">
+                  <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                    Персонализация интерфейса
+                  </p>
+                </div>
+                <div className="flex flex-col gap-[8px] items-start w-full">
+                  {/* First row */}
+                  <div className="flex gap-[8px] items-start w-full">
+                    <div className="bg-white flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px]">
+                      <img src={kpiIcon} alt="" className="w-[36px] h-[36px]" />
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Избранные KPI
+                      </p>
+                    </div>
+                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                      <img src={mainScrIcon} alt="" className="w-[36px] h-[36px]" />
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Состав главного экрана
+                      </p>
+                    </div>
+                  </div>
+                  {/* Second row */}
+                  <div className="flex gap-[8px] items-start w-full">
+                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                      <img src={widgetIcon} alt="" className="w-[36px] h-[36px]" />
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Порядок виджетов
+                      </p>
+                    </div>
+                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                      <img src={filterIcon} alt="" className="w-[36px] h-[36px]" />
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Сохраненные фильтры
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Общие настройки Section */}
+              <div className="flex flex-col gap-[24px] items-start">
+                <div className="flex flex-col gap-[12px] items-start w-full">
+                  <div className="flex gap-[35px] items-center w-full">
+                    <p className="flex-1 font-medium leading-[24px] text-[16px] text-black">
+                      Общие настройки
+                    </p>
+                  </div>
+                  <div className="flex gap-[8px] items-start w-full">
+                    <div className="bg-white flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px]">
+                      <img src={nitificationIcon} alt="" className="w-[36px] h-[36px]" />
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Уведомления
+                      </p>
+                    </div>
+                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                      <img src={periodIcon} alt="" className="w-[36px] h-[36px]" />
+                      <p className="font-normal leading-[24px] text-[16px] text-black">
+                        Период отображения
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Exit Button */}
+                <div className="flex gap-[8px] items-center justify-center px-[16px] py-[12px] bg-[#3a3b4f] rounded-[12px] w-full cursor-pointer">
+                  <img src={exitIcon} alt="" className="w-[28px] h-[28px]" />
+                  <p className="font-semibold leading-[24px] text-[16px] text-white whitespace-nowrap">
+                    Выйти из профиля
+                  </p>
+                </div>
+              </div>
+            </div>
           ) : null}
         </div>
 
@@ -1274,10 +1372,11 @@ function App() {
               </p>
             </div>
             <div
-              className="flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px pb-[7px] pt-[6px] px-[8px] relative rounded-[100px]"
+              className={`flex flex-1 flex-col gap-[0.5px] items-center justify-center min-w-px pb-[7px] pt-[6px] px-[8px] relative rounded-[100px] cursor-pointer ${activeTab === 'Профиль' ? 'bg-[#e8e8e8]' : ''}`}
+              onClick={() => setActiveTab('Профиль')}
             >
-              <img src={tabProfile} alt="" className="relative shrink-0 w-[28px] h-[28px]" style={{ filter: 'brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(727%) hue-rotate(203deg) brightness(95%) contrast(90%)' }} />
-              <p className="font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center text-[#3a3b4f]">
+              <img src={tabProfile} alt="" className="relative shrink-0 w-[28px] h-[28px]" style={{ filter: activeTab === 'Профиль' ? 'brightness(0) saturate(100%) invert(34%) sepia(89%) saturate(2476%) hue-rotate(183deg) brightness(101%) contrast(101%)' : 'brightness(0) saturate(100%) invert(13%) sepia(6%) saturate(727%) hue-rotate(203deg) brightness(95%) contrast(90%)' }} />
+              <p className={`font-['Manrope:SemiBold',sans-serif] font-semibold leading-[12px] min-w-full relative shrink-0 text-[10px] text-center ${activeTab === 'Профиль' ? 'text-[#00a4ff]' : 'text-[#3a3b4f]'}`}>
                 Профиль
               </p>
             </div>
