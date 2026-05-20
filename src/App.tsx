@@ -19,6 +19,14 @@ import LineChart2 from './assets/img/Line-Chart-2.svg';
 function App() {
   const [activeChip, setActiveChip] = useState('Финансы');
   const [activeTab, setActiveTab] = useState('Главная');
+
+  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (e.currentTarget.scrollWidth > e.currentTarget.clientWidth) {
+      e.preventDefault();
+      e.currentTarget.scrollLeft += e.deltaY;
+    }
+  };
+
   return (
     <div className="w-full min-h-screen bg-[#FFFFFF] flex items-center justify-center p-4 lg:p-8">
       <div className="desktop-container w-full bg-[#EEF1F1] flex flex-col overflow-hidden font-['Manrope']">
@@ -75,7 +83,7 @@ function App() {
               </div>
 
             {/* KPI Cards */}
-            <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px' }}>
+            <div className="flex !gap-2 overflow-x-auto !pb-2 mt-4" style={{ gap: '8px', marginTop: '16px' }} onWheel={handleWheel}>
               {/* KPI Card 1 */}
               <div className="bg-[#FFFFFF] content-stretch flex flex-col gap-[24px] items-start p-[16px] relative rounded-[16px] size-full w-[210px] lg:w-[210px] max-md:w-[280px] flex-shrink-0">
                 <p className="[word-break:break-word] font-['Manrope:Regular',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">
@@ -189,7 +197,7 @@ function App() {
             </div>
 
             {/* Chips Line */}
-            <div className="flex gap-[8px] overflow-x-auto" style={{ gap: '8px' }}>
+            <div className="flex gap-[8px] overflow-x-auto" style={{ gap: '8px' }} onWheel={handleWheel}>
               {/* Active Chip */}
               <div
                 className={`flex items-center justify-center px-[12px] py-[6px] rounded-[16px] shrink-0 cursor-pointer ${activeChip === 'Финансы' ? 'bg-[#d9e0e8]' : 'bg-[#FFFFFF]'}`}
