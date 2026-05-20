@@ -1260,7 +1260,7 @@ function App() {
           ) : activeTab === 'Профиль' ? (
             <div className="flex flex-col gap-[40px] items-start">
               {/* Profile Photo Section */}
-              <div className="bg-[#ffffff] flex flex-col gap-[16px] items-center px-[16px] py-[16px] relative rounded-[16px] w-full">
+              <div className="flex flex-col gap-[16px] items-center px-[16px] py-[16px] relative rounded-[16px] w-full">
                 <div className="relative shrink-0 size-[128px]">
                   <img src={Photo} alt="" className="w-full h-full object-cover rounded-full" />
                 </div>
@@ -1284,13 +1284,13 @@ function App() {
                 <div className="flex flex-col gap-[8px] items-start w-full">
                   {/* First row */}
                   <div className="flex gap-[8px] items-start w-full">
-                    <div className="bg-white flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px]">
+                    <div className="bg-[#FFFFFF] flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px] h-[132px]">
                       <img src={kpiIcon} alt="" className="w-[36px] h-[36px]" />
                       <p className="font-normal leading-[24px] text-[16px] text-black">
                         Избранные KPI
                       </p>
                     </div>
-                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                    <div className="bg-[#FFFFFF] flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px] h-[132px]">
                       <img src={mainScrIcon} alt="" className="w-[36px] h-[36px]" />
                       <p className="font-normal leading-[24px] text-[16px] text-black">
                         Состав главного экрана
@@ -1299,13 +1299,13 @@ function App() {
                   </div>
                   {/* Second row */}
                   <div className="flex gap-[8px] items-start w-full">
-                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                    <div className="bg-[#FFFFFF] flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px] h-[132px]">
                       <img src={widgetIcon} alt="" className="w-[36px] h-[36px]" />
                       <p className="font-normal leading-[24px] text-[16px] text-black">
                         Порядок виджетов
                       </p>
                     </div>
-                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                    <div className="bg-[#FFFFFF] flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px] h-[132px]">
                       <img src={filterIcon} alt="" className="w-[36px] h-[36px]" />
                       <p className="font-normal leading-[24px] text-[16px] text-black">
                         Сохраненные фильтры
@@ -1324,13 +1324,13 @@ function App() {
                     </p>
                   </div>
                   <div className="flex gap-[8px] items-start w-full">
-                    <div className="bg-white flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px]">
-                      <img src={nitificationIcon} alt="" className="w-[36px] h-[36px]" />
+                    <div className="bg-[#FFFFFF] flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px] h-[132px]">
+                      <img src={nitificationIcon} alt="" className="w-[36px] h-[36px]" style={{ filter: 'brightness(0) saturate(100%) invert(64%) sepia(95%) saturate(2476%) hue-rotate(183deg) brightness(101%) contrast(101%)' }} />
                       <p className="font-normal leading-[24px] text-[16px] text-black">
                         Уведомления
                       </p>
                     </div>
-                    <div className="bg-white flex flex-1 flex-col gap-[16px] items-start p-[16px] relative rounded-[16px]">
+                    <div className="bg-[#FFFFFF] flex flex-1 flex-col items-start justify-between p-[16px] relative rounded-[16px] h-[132px]">
                       <img src={periodIcon} alt="" className="w-[36px] h-[36px]" />
                       <p className="font-normal leading-[24px] text-[16px] text-black">
                         Период отображения
@@ -1339,9 +1339,9 @@ function App() {
                   </div>
                 </div>
                 {/* Exit Button */}
-                <div className="flex gap-[8px] items-center justify-center px-[16px] py-[12px] bg-[#3a3b4f] rounded-[12px] w-full cursor-pointer">
+                <div className="flex gap-[8px] items-center justify-center px-[16px] py-[12px] rounded-[12px] w-full cursor-pointer">
                   <img src={exitIcon} alt="" className="w-[28px] h-[28px]" />
-                  <p className="font-semibold leading-[24px] text-[16px] text-white whitespace-nowrap">
+                  <p className="font-semibold leading-[24px] text-[16px] text-[#3a3b4f] whitespace-nowrap">
                     Выйти из профиля
                   </p>
                 </div>
